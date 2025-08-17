@@ -1,0 +1,12 @@
+<h1 id="problem-h-anti-missile">Problem H: Anti-Missile</h1>
+<p>We want to execute a strategic missile strike against an enemy&#39;s critical resources. The enemy has deployed air defence systems to protect these resources. However, their defence setup has certain vulnerabilities, and your mission is to exploit them effectively.</p>
+<p>Each air defence system can protect al strategic resources and air defence systems within its radius of operation, but cannot defend itself. Due to technical limitations, each critical resource or air defence system is protected by at most one other air defence system.</p>
+<p>Missiles can be used to destroy either an undefended strategic resource or an air defence system.</p>
+<p>A resource is considered undefended if no active air defence system protects it. When an air defence system is destroyed, it can no longer protect any resources or other air defence systems. Your goal is to maximize the number of strategic resources destroyed.</p>
+<!-- Input -->
+<p>The input consists of the following:</p>
+<p>The first line contains three integers $m$ (number of missiles), $n$ (number of strategic resources), and $d$ (number of air defence systems), where ($0 \le m, n, d \le 5000$).</p>
+<p>The next $n$ lines contain two integers $x_i$ and $y_i$ ($0 \le x_i, y_i \le 10 ^ 9$) the coordinates of the $i ^ {th}$ strategic resource.</p>
+<p>The following $d$ lines each contain three integers $x_j$, $y_j$ and $r_j$ ($0 \le x_j, y_j \le 10 ^ 9; 0 \le r_j \le 10 ^ 9$) the coordinates of the $j ^ {th}$ air defence system and its radius of protection.</p>
+<!-- Output -->
+<p>Output the maximum number of strategic resources that can be destroyed.</p>
