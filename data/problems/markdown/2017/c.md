@@ -1,0 +1,15 @@
+# Problem C : Border Wall
+
+Through one of the most controversial presidential elections in the world, Mr. Trunk was finally elected as the president of Demoland. During his long presidential campaign, Mr. Trunk made a series of strange promises, one of which was to build a wall along the border of Demoland with its neighboring country, Indoland.
+
+Now, months after his election, Mr. Trunk has started thinking on how to really build the wall. To keep things simple, he has decided to build the wall along a straight line. However, there are still several difficulties. The main issue is that the houses owned by the citizens of these two neighboring countries are so mixed that it is almost impossible to separate them bya straight wall Wherever the wallis built, some houses must be evacuated and their residents must be moved to the other side of the wall in order to keep all citizens of each county on one side of the wall. The second issue is that the wall itself has some width, meaning that all houses intersected by the wall must be destructed. Of course, evacuating or destructing each house has a cost, and if the total number of such houses is high, it would raise a vigorous public protest. To make his final decision, Mr. Trunk is looking for a keen advisor to tell him how many houses must be evacuated/destructed at the minimum in order to build a straight border wall of a desired width.
+
+Being active in ACM ICPC, you have been selected as an advisor to Mr. President. The locations of the houses owned by the citizens of each country is given to you as a set of points in the plane. The desired width of the border wall is also given to you by the president. Your task is to compute the minimum number of points (houses) that must be removed (destructed or evacuated) so that the remaining point sets can be separated by a wall of the given width. Two point sets are called separated by a wall if (i) no two points from different sets lie in the same side of the wall, and (ii) none of the points intersects the wall except on its boundary lines.
+
+## Input
+
+There are multiple test cases in the input. The first line of each test case contains three positive integers $n$, $k$, $d$, where $n$ and $k$ indicate the number of houses owned by the citizens of Demoland and Indoland, respectively, and $d$ indicates the width of the border wall ($1 \le n, k \le 100$) and ($0 \le d < 1,000$). The next $n$ lines, each contains two integers $x$ and $y$ ($0 \le x, y \le 10,000$), where ($x, y$) represents the location of a house owned by a citizen of Demoland. Analogously, the next $k$ lines represent the location of the houses owned by the citizens ofIndoland. Note that no two houses are located in the same position. The input terminates with a line containing `0 0 0` which should not be processed.
+
+## Output
+
+For each testcase, output aline containing the minimum number of the points that must be removed to construct the wall. Note that all houses from a country may be destructed/evacuated in the optimal solution.

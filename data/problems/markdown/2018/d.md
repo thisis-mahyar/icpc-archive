@@ -1,0 +1,17 @@
+# Problem D: Nader Shah
+
+Nader Shah Afshar was one of the most powerful rulers in Iran. He won many battles, such as the battle of Herat, Mihmandust, and Kirkuk. During his ruling, Mashhad was Iran's capital. Each year, he planned an attack ona new country, and annexed it to Iran's territory. As Nader Shah's past victories were known to everyone, the country under attack was surrendering the battle without any combat. Therefore, after some years, Iran's territory was expanded to $n$ new countries.
+
+There was a connected road network between the countries. All roads were two-way passing. Nader Shah only attacked those countries which had at least one road to Iran's territory at the moment. After capturing each country, Nader Shah chose exactly one road between the captured country and Iran's territory at that moment, and put Iran flag on it at every one kilometer. In order to make costs as minimal as possible, he chose the shortest road as it needed less Iran flags (if there are more than one shortest road, he arbitrarily chose one of them). These roads were called Afshari roads. Obviously, by choosing the roads this way, there are exactly $k - 1$ Afshari roads when Iran's territory consists of $k$ countries.
+
+Several years later, we have received a map of Iran's territory at the end of Nader Shah's life. The map has all the road network on it with their lengths in kilometers. Afshari roads are marked in the map. There are $n$ countries on the map, $m$ roads connecting them, and $n - 1$ of those roads marked as Afshari. Each country is marked by a distinct number $1 \le x \le n$. We do not distinguish between the numbers and the countries.
+
+Given the map described above, we want to know the possible country corresponding to Iran and the order by which Nader Shah captured countries. One possible answer can be shown as $a_1, a_2, \dots, a_n$ where $a_1$ corresponds to Iran, $a_2$ is the first country that Nader Shah captured, $a_3$ is the second country he captured, and so on. We want to know the lexicographically minimum possible answer. Array $x_1, x_2, \dots, x_n$ is lexicographically smaller than $y_1, y_2, \dots, y_n$ if and only if there exists a number $i$ ($1 \le i \le n$) that $(x_1 = y_1) \wedge (x_2 = y_2) \wedge \dots \wedge (x_{i - 1} = y_{i - 1})$ and $x_i < y_i$.
+
+## Input
+
+The first line of the input contains two integers $n$ and $m$ ($ 1 \le n \le 1,000, n - 1 \le m \le 5,000$) where $n$ and $m$ are the number of countries and the number of roads in the map (the road network), respectively. The next $m$ lines describe the road network; each line contains four integers $u$, $v$ , $w$ and $r$ ($1 \le u, v \le n, 1 \le w \le 10 ^ 6$, and $r \in {0, 1}$) which indicate there is a road between $u$ and $v$ with the length of $w$ kilometers, and $r$ denotes whether the road is Afshari or not. The road is Afshari if and only if $r = 1$. There is at most one road between two countries. It is guaranteed that there are exactly $n - 1$ Afshari roads in the road network, and all $n$ countries are connected through these $n - 1$ roads.
+
+## Output
+
+If there is no answer to the problem, print `Wrong Map!`. Otherwise, write the lexicographically minimum answer to the problem.

@@ -1,0 +1,19 @@
+# Problem I: Black Family Tree
+
+A Time-Turner is a magical device used to travel back in time, spend some time there, and then get back to the current time.
+
+Rose Granger has found a Time-Turner in the libraries of Hogwarts and took it upon herself to go back in time and take out some members of the Black family, in order to save the lives of muggles (humans without any magical ability).
+
+The Black family has $n$ members, numbered 1 to $n$ in order of being born. Member 1 is the first member of the Black family with a recorded history. For each $i$ ($2 \le i \le n$), member $i$ is a direct descendant of member $p_i$ ($1 \le p_i < i$). i.e., member $p_i$ and all of his/her ancestors are an ancestor of member $i$. It is also written in the books that the $i$-th member of the Black family is responsible for the death of $c_i$ muggles.
+
+Now Rose has $q$ options. The $j$-th option is to use the Time-Turner to go back in time and take out all the members from $a_j$ to $b_j$ ($a_j \le b_j$) and then come back to the current time. As a consequence of this action, any member of the Black family who has an ancestor among members $a_j$ to $b_j$ will never be born. For any member $i$ who is among members $a_j$ to $b_j$ (i.e. $a_j \le i \le b_j$), or has an ancestor among members $a_j$ to $b_j$, Rose will save $c_i$ lives.
+
+For each option, help Rose to find out how many lives she will save if she takes that option.
+
+## Input
+
+The first line of the input contains two integers $n$ and $q$ ($2 \le n \le 10 ^ 5, 1 \le q \le 10 ^ 5$). The second line contains $n$ space-separated integers $c_1$ to $c_n$ ($0 \le c_i \le 10 ^ 4$). The third line contains $n - 1$ integers $p_2$ to $p_n$ ($1 \le p_i < i$). Each of the next $q$ lines contains one option; The $j$-th line contains two integers $a_j$ and $b_j$ ($1 \le a_j \le b_j \le n$).
+
+## Output
+
+For each $j$ ($1 \le j \le q$), output the number of lives Rose will save if she takes the $j$-th option.

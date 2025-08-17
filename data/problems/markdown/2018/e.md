@@ -1,0 +1,25 @@
+# Problem E: JackRabbit Slim
+
+We all love rabbits, right? Unfortunately, they don't even like us, rather, they love carrots instead!
+
+They love carrots so much that they would do anything to get to a carrot, even running. That might sound easy, but rabbits are lazy, it's the jackrabbits who are the active ones. That's why this problem is about jackrabbits and not rabbits. In fact, it's about a very specific black-tailed jackrabbit, named Slim.
+
+Earlier this morning, before the contest started, a truck loaded with carrots passed through the road by Slim's house. Slim was so lucky that $n$ carrots dropped off on the road. We number them 1 to $n$ from left to right. When Slim left home, he found a carrot. After taking a look around, his plan for the day became clear: Locate the closest carrot, get to it and eat it, then repeat.
+
+The road by Slim's house is a straight road of length $10 ^ 9$ and the $i$-th carrot on the road is at coordinate $x_i$.
+
+Consider Slim starts his day by standing at the position of the $j$-th carrot and eating it. Then as long as there are more carrots, he follows the following steps:
+
+- Locate the closest remaining carrot. If there are two closest carrots, choose the one to the right.
+
+- Run to it and eat it. Simple!
+
+For each value of $j$, we call $D_j$ the total distance Slim runs if it starts the day by eating carrot $j$. For an unknown reason, we are interested in finding the sum of all $D_j$ values, for all values of $j$ ($1 \le j \le n$).
+
+## Input
+
+The first line of the input contains a single integer $n$ ($ 1 \le n \le 10 ^ 5$), the number of carrots. The second line of the input contains $n$ space-separated distinct integers $x_1, \dots, x_n$ ($0 \le x_i \le 10 ^ 9$). The coordinates of the carrots are in an increasing order.
+
+## Output
+
+Output an integer value, which is the sum of all $D_j$ values (for $j$ from 1 through $n$).
