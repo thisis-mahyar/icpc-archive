@@ -1,0 +1,59 @@
+INSERT
+INTO
+    icpc_archive.problems
+    (
+        label,
+        title,
+        description,
+        input,
+        output,
+        contest_id
+    )
+VALUES
+    (
+        'F',
+        'Homotopic Paths',
+        '
+        <p>
+            Soroush plans to walk through a predefined path in the birds garden from the
+            playful dog on a leash does not necessarily follow the same path, but he
+            finally reaches the exit point. The garden is full of tall tres, and there
+            is no other obstacle. The leash is constructed in such a way that its length
+            can vary from 0 to any length, but it tends to have the smallest length at
+            any time. Soroush and his dog start their journey from the entrance point
+            with the leash length to be zero. Soroush is wondering by knowing his dog''s
+            path in advance, if it is possible for the leash length to be zero when they
+            both arrive at the exit point. Note that the leash can not be passed over
+            the trees. If the leash length is zero at the exit point, the Soroush''s
+            path and his dog''s path are called homotopic. Your task is to write a
+            program to determine whether two given paths are homotopic.
+        </p>
+        ',
+        '
+        <p>
+            There are multiple test cases in the input. The first line of each test case
+            contains three positive integers $n$, $m$ and $k$ ($0 \le m, k \le 10,000$
+            and $1 \le n \le 1,000$ where $n$ is the number of trees, and $m$ and $k$
+            are the number of the intermediate vertices of the Soroush''s path
+            and his dog''s path, respectively. The next two lines contain the $x$ and
+            $y$ coordinates of the entrance point $s$ and the exit point $t$ ($s \neq
+            t$) in that order. The next $n$ lines present the $x$ and $y$ coordinates of
+            the trees. Let Soroush''s path and his dog''s path be $s, v_1, \dots,
+            v_m, t$ and $s, u_1, \dots, u_k, t$, respectively. At the end, the $x$ and
+            $y$ coordinates of $v_1, \dots, v_m$ come in $m$ lines in order and then the
+            $x$ and $y$ coordinates of $u_1, \dots, u_k$ come in $k$ lines in order.
+            Note that the paths may have self-intersections or intersect each other.
+            There is no tree on the Soroush''s path or his dog''s path including
+            $s$ and $t$. You can assume all input coordinates are integers whose
+            absolute values are at most $10 ^ 6$. The input terminates with a line
+            containing <code>0 0 0</code> which should not be processed.
+        </p>
+        ',
+        '
+        <p>
+            For each test case, output a line containing <code>Yes</code> if the two
+            given paths are homotopic. Output <code>No</code>, otherwise.
+        </p>
+        ',
+        19
+    );

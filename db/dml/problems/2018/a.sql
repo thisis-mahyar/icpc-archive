@@ -1,0 +1,64 @@
+INSERT
+INTO
+    icpc_archive.problems
+    (
+        label,
+        title,
+        description,
+        input,
+        output,
+        contest_id
+    )
+VALUES
+    (
+        'A',
+        'ICPC',
+        '
+        <p>
+            The Iranian ChamPions Cup (ICPC), the most prestigious football league in
+            Iran, is reaching its end, and people are eagerly waiting for the finals,
+            which happened to be between the two most popular Iranian teams, Persepolis
+            and Esteghlal.
+        </p>
+        <p>
+            The ICPC finals consist of two matches, with each team competing as the home
+            team in one match. The winning team is determined by aggregate score, the
+            sum of the scores of the two matches. For example, if the scores of the two
+            matches are Persepolis 6-0 Esteghlal in the first match, and Esteghlal 3-1
+            Persepolis in the second match, then the aggregate score will be Persepolis
+            7-3 Esteghlal, meaning that Persepolis is the winner. If aggregates are
+            equal, the away goals rule is used to determine the winner, in which case
+            the winner is the team that scored the most goals in the match it played
+            away from home. If the result is still equal, a penalty shootout is
+            required.
+        </p>
+        <p>
+            Hana, an avid football fan, is trying to figure out various scenarios in
+            which her favorite team wins the finals. To this end, she aims to write a
+            program that gets as input the number of goals in the two matches, and
+            decides which team is the winner if it can be derived from the aggregate
+            scores and the away goals rule, otherwise declares that the match goes to
+            penalty kicks. You are going to help Hana write such a program.
+        </p>
+        ',
+        '
+        <p>
+            The first line of the input contains two space-separated integers $p_1$ and
+            $s_1$, where $p_1$ and $s_1$ are the number of goals scored by Persepolis
+            and Esteghlal, respectively, in the first match in which Persepolis is the
+            home team. The second line contains two space-separated integers $s_2$ and
+            $p_2$, where $s_2$ and $p_2$ are the number of goals scored by Esteghlal and
+            Persepolis, respectively, in the second match in which Esteghlal is the home
+            team. All input integers are between 0 and 20, inclusively.
+        </p>
+        ',
+        '
+        <p>
+            In the output, print the name of the winning team, either
+            <code>Persepolis</code> or <code>Esteghlal</code>, if the winner can
+            be determined by the aggregate scores and the away goals rule. Otherwise,
+            print <code>Penalty</code>.
+        </p>
+        ',
+        20
+    );

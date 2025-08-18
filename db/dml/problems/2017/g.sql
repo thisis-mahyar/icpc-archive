@@ -1,0 +1,75 @@
+INSERT
+INTO
+    icpc_archive.problems
+    (
+        label,
+        title,
+        description,
+        input,
+        output,
+        contest_id
+    )
+VALUES
+    (
+        'G',
+        'New Country Division',
+        '
+        <p>
+            Tehran province is decided to be divided into two provinces: Alborz and New
+            Tehran. There are lots of cities in the old Tehran province that should be
+            distributed between these two new provinces. The criteria for distribution
+            is the safety of inter-province transportation.
+        </p>
+        <p>
+            Amir is given the map of old Tehran province, including cities and roads and
+            a safety measure foreach road. He is supposed to decide for each city to be
+            in either New Tehran or Alborz province. There are two special cities,
+            Tehran and Karaj that should be in New Tehran and Alborz provinces,
+            respectively. Note that it is possible that a city in a province will not be
+            reachable by another city in the same province.
+        </p>
+        <p>
+            Amir needs to divide the cities in the safest possible manner. The safety of
+            a province division is calculated using a drone. The drone flies between two
+            provinces and crosses all bidirectional roads connecting two cities in
+            different provinces exactly once. Each time it passes over a road, the drone
+            calculates the safety of that road and updates the overall safety of the
+            roads it has passed so far. The safety of a road is calculated using a
+            sensor that stores it as a 60-bit binary number. The drone also stores the
+            overall safety in a 60-bit binary number. After passing a road with safety
+            $x_60 x_59 \dots x_1$, the $i$-th bit of the overall safety is flipped if
+            $x_i$ equals 1 and is left untouched otherwise. The safety of the province
+            division is the overall safety after the drone finishes its journey. Note
+            that initially the overall safety is zero, so if there is no road between
+            two provinces the overall safety does not change during drone''s journey
+            which means the safety of that province division is zero.
+        </p>
+        <p>
+            There are $n$ cities in the old Tehran numbered from 1 to $n$. Tehran is
+            city number 1 and Karaj is city number $n$. Your task is to help Amir by
+            writing a program that finds a division of cities with the maximum overall
+            safety.
+        </p>
+        ',
+        '
+        <p>
+            There are multiple test cases in the input. The first line of each test case
+            contains two integers $n$ and $m$ ($2 \le n \le 100$, and $1 \le m \le \frac
+            {n (n - 1)} 2$), which indicate the number of cites and the total number of
+            roads, respectively. The next $m$ lines, each contain three positive
+            integers $u$, $v$ and $r$ ($1 \le u, v \le n, u \ne v$, and $0 \le r \le 2 ^
+            60$) which indicate that there is a road between cities $u$ and $v$ with
+            safety $r$ (assume that the safety of all roads has been already calculated
+            by the drone''s sensor). It is guaranteed that there is at most one road
+            between each pair of cities. Input terminates with a line containing <code>0
+            0</code>which should not be processed.
+        </p>
+        ',
+        '
+        <p>
+            For each test case, output a line containing the overall safety of the
+            division which maximizes it.
+        </p>
+        ',
+        19
+    );

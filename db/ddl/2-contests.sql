@@ -1,4 +1,4 @@
-USE icpc_tehran;
+USE icpc_archive;
 
 CREATE TABLE IF NOT EXISTS contests
 (

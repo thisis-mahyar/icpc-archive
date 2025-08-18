@@ -1,0 +1,85 @@
+INSERT
+INTO
+    icpc_archive.problems
+    (
+        label,
+        title,
+        description,
+        input,
+        output,
+        contest_id
+    )
+VALUES
+    (
+        'F',
+        'Imputation',
+        '
+        <p>
+            Leila is a Bioinformatician, interested in studying Bacterial evolution. In
+            one experiment on a special type of Bacteria, she started from a single
+            bacterium, put it on a plate, and monitored the bacterial division, until
+            she obtained a population of $k$ bacteria. During the process, she carefully
+            reported the evolutionary relations between bacteria. Precisely, for each
+            bacterium, she reported its parent bacterium.
+        </p>
+        <p>
+            In the next step, she extracted DNA sequences of $k$ bacteria in the final
+            population, by NGS technology. Each DNA sequence is represented as a string
+            of length $m$ from the alphabet set ${A, T, C, G}$.
+        </p>
+        <p>
+            The NGS technology has a drawback: it produces a lot of missing values. So,
+            there are a lot of unknown characters indicated by ''?'' in the extracted
+            sequences. Considering the evolutionary relationship between bacteria, Leila
+            wants to impute the missing values. Among all possible imputations, she
+            wants to find the minimum cost imputation from an evolutionary perspective.
+        </p>
+        <p>
+            The problem is defined as follows. A rooted tree $T$ is given, and for each
+            leaf $v$ of $T$, a string $b_v$ of length $m$ from the character set ${A, T,
+            C, G, ?}$ is given. A transition cost matrix $\Delta$ is also given, where
+            $\Delta (x, y)$ ($x, y \in {A, T, C, G}$) represents the cost of a
+            transition from an $x$ character to a $y$ character, from a parent to its
+            child.
+        </p>
+        <p>
+            A feasible imputation, assigns a string $s_u$ of length $m$ from the
+            character set ${A, T, C, G}$ to each vertex $u$, where for each leaf $v$ of
+            $T$, $s_v$ is equal to $b_v$ except for ''?'' characters in $b_v$. The
+            evolutionary cost of an imputation is defined as the sum of evolutionary
+            costs of all edges. The evolutionary cost of an edge between parent $u$ and
+            child $w$, is defined as $\sum _ {i = 1} ^ m \Delta (s_u [i], s_w [i])$,
+            where $s_u [i]$ is the $i$-th character of $s_u$.
+        </p>
+        <p>
+            Leila wants to find a feasible imputation for $T$, which has the minimum
+            evolutionary cost among all feasible imputations. The tree $T$, transition
+            cost matrix $\Delta$, and a string $b_v$ for each leaf $v$ are given. You
+            should write a program to compute the minimum evolutionary cost of feasible
+            imputations.
+        </p>
+        ',
+        '
+        <p>
+            The first line of the input contains an integer $n$ ($2 \le n \le 10,000$)
+            denoting the number of vertices of $T$. The vertices of $T$ are numbered
+            from 1 to $n$. The root of the tree is numbered 1. The root is never
+            considered as a leaf, even if it has only one child. The next $n - 1$ lines
+            describe the edges of $T$; each line contains two endpoints of an edge
+            separated by spaces. In the next four lines, the evolutionary cost matrix
+            $\Delta$ is given; each line is for one row of $\Delta$. Rows (corresponding
+            to a parent) and columns (corresponding to a child) of $\Delta$ are ordered
+            to respectively represent characters $A$, $T$, $C$ and $G$. All entries of
+            $\Delta$ are non-negative integers not more than $10 ^ 6$. The next line
+            just contains $k$, the number of leaves. Finally, each leaf $v$ (its number)
+            and its $b_v$ which is a string of size $m$ ($1 \le m \le 200$) appear in
+            one line.
+        </p>
+        ',
+        '
+        <p>
+            In one line, print the minimum evolutionary cost of feasible imputations.
+        </p>
+        ',
+        20
+    );

@@ -1,0 +1,63 @@
+INSERT
+INTO
+    icpc_archive.problems
+    (
+        label,
+        title,
+        description,
+        input,
+        output,
+        contest_id
+    )
+VALUES
+    (
+        'E',
+        'Barareh on Fire',
+        '
+        <p>
+            The Barareh village is on fire due to the attack of the virtual enemy.
+            Several places are already on fire and the fire is spreading fast to other
+            places. Khorzookhan who is the only person remaining alive in the war with
+            the virtual enemy, tries to rescue himself by reaching to the only
+            helicopter in the Barareh village.
+        </p>
+        <p>
+            Suppose the Barareh village is represented by an $n \times m$ grid. At the
+            initial time, some grid cells are on fire. If a cell catches fire at time
+            $x$, all its 8 vertex-neighboring cells will catch fire at time $x + k$. If
+            a cell catches fire, it will be on fire forever. At the initial time,
+            Khorzookhan stands at cell $s$ and the helicopter is located at cell $t$ At
+            any time $x$, Khorzookhan can move from its current cell to one of four
+            edge-neighboring cells, located at the left, right, top, or bottom of its
+            current cell if that cell is not on fire at time $x + 1$. Note that each
+            move takes one second.
+        </p>
+        <p>
+            Your task is to write a program to find the shortest path from $s$ to $t$
+            avoiding fire.
+        </p>
+        ',
+        '
+        <p>
+            There are multiple test cases in the input. The first line of each test case
+            contains three positive integers $n$, $m$ and $k$ ($1 \le n, m, k \le 100$),
+            where $n$ and $m$ indicate the size of the test case grid $n \times m$, and
+            $k$ denotes the growth rate of fire. The next $n$ lines, each contains a
+            string of length $m$, where the $j$th character of the $i$th line represents
+            the cell ($i, j$) of the grid. Cells which are on fire at time 0, are
+            presented by character <code>f</code>. There may exist no <code>f</code> in
+            the test case. The helicopter and Khorzookhan are located at cells presented
+            by <code>t</code> and <code>s</code>, respectively. Other cells are filled
+            by <code>-</code> characters. The input terminates with a line containing
+            <code>0 0 0</code> which should not be processed.
+        </p>
+        ',
+        '
+        <p>
+            For each test case, output a line containing the shortest time to reach $t$
+            from $s$ avoiding fire. If it is impossible to reach $t$ from <code>s</code>,
+            write <code>Impossible</code> in the output.
+        </p>
+        ',
+        19
+    );

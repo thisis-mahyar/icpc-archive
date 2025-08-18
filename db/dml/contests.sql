@@ -1,4 +1,6 @@
-INSERT INTO icpc_tehran.contests (year)
+USE icpc_archive;
+
+INSERT INTO contests (year)
 VALUES
     (1999),
     (2000),

@@ -1,1 +1,1 @@
-CREATE DATABASE icpc_tehran;
+CREATE DATABASE icpc_archive;

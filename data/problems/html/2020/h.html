@@ -20,28 +20,27 @@
             insertion: A new bird joins the group and inserts herself somewhere
             in the row of the birds.
         </p>
-</li>
+    </li>
     <li>
         <p>
             departure: A bird in the row leaves the group for rest of the ritual
             and flies away.
         </p>
-</li>
+    </li>
     <li>
         <p>
             relocation: A bird in the row flies from her position and sits
             (inserts herself) somewhere else in the row.
         </p>
-</li>
+    </li>
 </ul>
-
 <p>
     Given the initial position of the birds in the row and the sequence of
     actions, your task is to compute the final position of the birds in the
     ritual.
 </p>
 
-<!-- Input -->
+<!-------------------------------- Input -------------------------------->
 
 <p>
     The input starts with a line containing two space-separated integers $n$ ($1
@@ -60,7 +59,6 @@
 <ul>
     <li>insertion: <code>insert bird-name position</code></li>
 </ul>
-
 <p>
     The <code>position</code> parameter is an integer showing the number of
     birds to the left of the insertion position. This parameter is in the range
@@ -73,14 +71,13 @@
         <p>
             departure: <code>depart bird-name</code>
         </p>
-</li>
+    </li>
     <li>
         <p>
             relocation: <code>relocate bird-name displacement</code>
         </p>
-</li>
+    </li>
 </ul>
-
 <p>
     The <code>displacement</code> parameter is an integer that can be positive,
     negative, or zero. The bird flies to her own position if the displacement is
@@ -98,7 +95,7 @@
     always at least one bird on the branch throughout the ritual.
 </p>
 
-<!-- Output -->
+<!-------------------------------- Output -------------------------------->
 
 <p>
     Print a single line in the output containing the final configuration of the
