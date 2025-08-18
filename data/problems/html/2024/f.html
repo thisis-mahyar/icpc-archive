@@ -1,27 +1,126 @@
-<h1 id="problem-f-i-am-sherlocked">Problem F: I am Sherlocked</h1>
-<p>Detectives of Scotland Yard, the headquarters of the Metropolitan Police, informed Sherlock Holmes about a cyber attack on the Central Bank by James Moriarty. They have also found that there is a secret code that can stop the attack. According to their top Agent, Moriarty has hidden the code in one of his clients&#39; phonebook. Interestingly, Sherlock has access to this mysterious client!</p>
-<p>It is known that each correct phone number has 11 digits and starts with a leading zero digit. Moriarty&#39;s client may separate the digits of each phone number with hyphen (<code>-</code>) or space characters. Even the leading zero digit might be missing for some phone numbers in the notebook. For example, phone number <code>09163264128</code> might be written like <code>916 32 64 128</code>, or even <code>- 0916-16-32--64 - 128-</code>. Sherlock is not aware of the exact content of the phonebook, but due to his previous knowledge, he knows how the owner writes phone numbers.</p>
-<p>Sherlock arranged a friendly conversation with the owner of the phonebook in a cafe. Meanwhile, Dr. John Watson, Sherlock&#39;s colleague, took the phonebook sneakily. Sherlock instructed Dr. Watson to clean up the phonebook into a new cleaned sequence $C$ of numerical characters in his computer. The sequence is zero-indexed, i.e. the index of the first element is zero. To this end, Dr. Watson should type the phone numbers consecutively (without any non-digit/separating characters) into his computer, in the same order of appearance as in the phonebook. In order to clean the phone numbers, he should remove all non-digit characters and add the leading zero if necessary.</p>
-<p>According to their plan, Sherlock is supposed to have an informal conversation with the mysterious client. As soon as he finds any information about the code, he is going to text it to Dr. Watson. To this end, Dr. Watson has already prepared the cleaned sequence $C$ and has put the cursor at the beginning character. This cursor can be placed before any character of $C$. He should wait for Sherlock&#39;s instructions to produce the output sequence $S$.</p>
-<p>Sherlock assumes that Dr. Watson has made the cleaned sequence $C$ and send one of the following. Instructions based on that:</p>
+<!-- I am Sherlocked -->
+
+<p>
+    Detectives of Scotland Yard, the headquarters of the Metropolitan Police,
+    informed Sherlock Holmes about a cyberattack on the Central Bank by James
+    Moriarty. They have also found that there is a secret code that can stop the
+    attack. According to their top Agent, Moriarty has hidden the code in one of
+    his clients' phonebook. Interestingly, Sherlock has access to this
+    mysterious client!
+</p>
+<p>
+    It is known that each correct phone number has 11 digits and starts with a
+    leading zero digit. Moriarty's client may separate the digits of each phone
+    number with hyphen (<code>-</code>) or space characters. Even the leading
+    zero digit might be missing for some phone numbers in the notebook. For
+    example, phone number <code>09163264128</code> might be written like <code>916
+    32 64 128</code>, or even <code>- 0916-16-32--64 - 128-</code>. Sherlock is
+    not aware of the exact content of the phonebook, but due to his previous
+    knowledge, he knows how the owner writes phone numbers.
+</p>
+<p>
+    Sherlock arranged a friendly conversation with the owner of the phonebook in
+    a cafe. Meanwhile, Dr. John Watson, Sherlock's colleague, took the phonebook
+    sneakily. Sherlock instructed Dr. Watson to clean up the phonebook into a
+    new cleaned sequence $C$ of numerical characters in his computer. The
+    sequence is zero-indexed, i.e. the index of the first element is zero. To
+    this end, Dr. Watson should type the phone numbers consecutively (without
+    any non-digit/separating characters) into his computer, in the same order of
+    appearance as in the phonebook. In order to clean the phone numbers, he
+    should remove all non-digit characters and add the leading zero if
+    necessary.
+</p>
+<p>
+    According to their plan, Sherlock is supposed to have an informal
+    conversation with the mysterious client. As soon as he finds any information
+    about the code, he is going to text it to Dr. Watson. To this end, Dr.
+    Watson has already prepared the cleaned sequence $C$ and has put the cursor
+    at the beginning character. This cursor can be placed before any character
+    of $C$. He should wait for Sherlock's instructions to produce the output
+    sequence $S$.
+</p>
+<p>
+    Sherlock assumes that Dr. Watson has made the cleaned sequence $C$ and send
+    one of the following. Instructions based on that:
+</p>
 <ol>
-    <li><p><code>go</code> $i$: Move the cursor to the beginning of the $i ^ {th}$ cleaned phone number in $C$. For example, to jump to the first phone number in $C$ he would use <code>go 0</code>.</p>
+    <li>
+        <p>
+            <code>go</code> $i$: Move the cursor to the beginning of the $i ^
+            {th}$ cleaned phone number in $C$. For example, to jump to the first
+            phone number in $C$ he would use <code>go 0</code>.
+        </p>
     </li>
-    <li><p><code>forward</code> $i$: Move the cursor forward by $i$ digits.</p>
+    <li>
+        <p>
+            <code>forward</code> $i$: Move the cursor forward by $i$ digits.
+        </p>
     </li>
-    <li><p><code>backward</code> $i$: Move the cursor backward by $i$ digits.</p>
+    <li>
+        <p>
+            <code>backward</code> $i$: Move the cursor backward by $i$ digits.
+        </p>
     </li>
-    <li><p><code>next</code> $i$: Write the next $i$ digits starting at the current position into $S$. More specifically, if Dr. Watson&#39;s cursor is before position $c$, he should pick digits $c, c + 1, \dots, c + i - 1$ but the position of the cursor remains unchanged.</p>
+    <li>
+        <p>
+            <code>next</code> $i$: Write the next $i$ digits starting at the
+            current position into $S$. More specifically, if Dr. Watson's cursor
+            is before position $c$, he should pick digits $c, c + 1, \dots, c +
+            i - 1$ but the position of the cursor remains unchanged.
+        </p>
     </li>
-    <li><p><code>pick</code> $i \ j$: If $i &lt; j$, write digits into $S$ from the position $i$ to $j$ ($ i , i + 1 , \dotsc , j $) of the current phone number, which is the one that the digit after the cursor belongs to. Otherwise he should write ($ i , i - 1 , \dots , j $). Again, the position of the cursor remains the same. Note that, $0 \le i , j \le 10$ and <code>pick 0 0</code> will pick the first digit.</p>
+    <li>
+        <p>
+            <code>pick</code> $i \ j$: If $i &lt; j$, write digits into $S$ from
+            the position $i$ to $j$ ($ i , i + 1 , \dots , j $) of the current
+            phone number, which is the one that the digit after the cursor
+            belongs to. Otherwise, he should write ($ i , i - 1 , \dots , j $).
+            Again, the position of the cursor remains the same. Note that, $0
+            \le i , j \le 10$ and <code>pick 0 0</code> will pick the first
+            digit.
+        </p>
     </li>
 </ol>
-<p>For the sake of any correction, Sherlock may also send the following instruction:</p>
+<p>
+    For the sake of any correction, Sherlock may also send the following
+    instruction:
+</p>
 <ul>
-    <li><code>delete</code> $i$: Delete the last $i$ digits from the end of $S$.</li>
+    <li>
+        <code>delete</code> $i$: Delete the last $i$ digits from the end of $S$.
+    </li>
 </ul>
+
 <!-- Input -->
-<p>The input consists of the phonebook&#39;s content and Sherlock&#39;s instructions. The phonebook contains $n$ phone numbers ($1 \le n \le 1000$), separated by commas or newlines. Each phone number in the phonebook is a string, consisting of 10 or 11 digits (<code>0-9</code>) and possibly hyphens ("-") and/or spaces characters. The size of the phonebook, i.e. the number of characters in the phonebook, will not exceed $10 ^ 6$ characters. The list of the phone numbers terminates with a line containing the single character <code>#</code>.</p>
-<p>Each of the rest of the following lines contains one of Sherlock&#39;s instructions. He will send at most 10 000 instructions. All instruction&#39;s arguments are non-negative integers not greater than 20 000. It is guaranteed that all Sherlock&#39;s texts are in the form of one of the six mentioned instructions.</p>
+
+<p>
+    The input consists of the phonebook's content and Sherlock's instructions.
+    The phonebook contains $n$ phone numbers ($1 \le n \le 1000$), separated by
+    commas or newlines. Each phone number in the phonebook is a string,
+    consisting of 10 or 11 digits (<code>0-9</code>) and possibly hyphens ("-")
+    and/or spaces characters. The size of the phonebook, i.e. the number of
+    characters in the phonebook, will not exceed $10 ^ 6$ characters. The list
+    of the phone numbers terminates with a line containing the single character
+    <code>#</code>.
+</p>
+<p>
+    Each of the rest of the following lines contains one of Sherlock's
+    instructions. He will send at most 10 000 instructions. All instruction's
+    arguments are non-negative integers not greater than 20 000. It is
+    guaranteed that all Sherlock's texts are in the form of one of the six
+    mentioned instructions.
+</p>
+
 <!-- Output -->
-<p>Print the extracted secret code (possibly empty), which is a string of digits. If the extracted secret code has more than l000 digits, just print the first 10 000 first digits. Sherlock might lose his attention and send malfunctioning instruction. He might jump to a non-existing phone number (with <code>go</code>) or send an invalid argument for <code>forward</code>, <code>backward</code>, <code>next</code>, <code>pick</code>, and <code>delete</code> i.e. the instruction refers to a digit or phone that doesn&#39;t exist in cleaned sequence $C$. In such cases you find that Moriarty has succeeded and print <code>MIss ME!</code> with capital letters.</p>
+
+<p>
+    Print the extracted secret code (possibly empty), which is a string of
+    digits. If the extracted secret code has more than l000 digits, just print
+    the first 10 000 first digits. Sherlock might lose his attention and send
+    malfunctioning instruction. He might jump to a non-existing phone number
+    (with <code>go</code>) or send an invalid argument for <code>forward</code>,
+    <code>backward</code>, <code>next</code>, <code>pick</code>, and <code>delete</code>
+    i.e. the instruction refers to a digit or phone that doesn't exist in
+    cleaned sequence $C$. In such cases you find that Moriarty has succeeded and
+    print <code>MIss ME!</code> with capital letters.
+</p>
