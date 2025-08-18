@@ -130,7 +130,7 @@ VALUES
         '
         <p>
             The input consists of $n$ requests or queries from Roz while she is
-            reviewing ($1 \le n \le 5000$);each appears in a separated line. The name of
+            reviewing ($1 \\le n \\le 5000$);each appears in a separated line. The name of
             each good is limited to 100 characters. Each container description might
             have at most 5000 characters and the input size is less than $10 ^ 6$
             characters.

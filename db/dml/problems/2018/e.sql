@@ -59,14 +59,14 @@ VALUES
             For each value of $j$, we call $D_j$ the total distance Slim runs if it
             starts the day by eating carrot $j$. For an unknown reason, we are
             interested in finding the sum of all $D_j$ values, for all values of $j$ ($1
-            \le j \le n$).
+            \\le j \\le n$).
         </p>
         ',
         '
         <p>
-            The first line of the input contains a single integer $n$ ($ 1 \le n \le 10
+            The first line of the input contains a single integer $n$ ($ 1 \\le n \\le 10
             ^ 5$), the number of carrots. The second line of the input contains $n$
-            space-separated distinct integers $x_1, \dots, x_n$ ($0 \le x_i \le 10 ^
+            space-separated distinct integers $x_1, \\dots, x_n$ ($0 \\le x_i \\le 10 ^
             9$). The coordinates of the carrots are in an increasing order.
         </p>
         ',

@@ -41,15 +41,15 @@
 
 <p>
     The input starts with a line containing a single integer $k$, as the number
-    of chunks ($1 \le k \le 10 ^ 5$). The next $k$ lines contain the complete
+    of chunks ($1 \\le k \\le 10 ^ 5$). The next $k$ lines contain the complete
     input message, where every line represents a non-empty chunk. You can assume
     the ChatGPT message does not contain newline characters, and the chunks
     could start or end with spaces. It is guaranteed that the total number of
     characters in all the chunks combined will not exceed $10 ^ 5$, and the
     final rendered message will not be empty. The last line contains $k$
-    space-separated integers, $t_1, t_2, \dots, t_k$, where $t_i$ is the time
-    the chatbot receives the $i ^ {th}$ chunk from ChatGPT ($1 \le t_1 &lt; t_2
-    &lt; \dot &lt; t_k \le 10 ^ 9$).
+    space-separated integers, $t_1, t_2, \\dots, t_k$, where $t_i$ is the time
+    the chatbot receives the $i ^ {th}$ chunk from ChatGPT ($1 \\le t_1 &lt; t_2
+    &lt; \\dot &lt; t_k \\le 10 ^ 9$).
 </p>
 <p>
     The ChatGPT message has the following <strong>Darkdown</strong> formatting:
@@ -71,7 +71,7 @@
             <li>
                 <p>
                     Formatting markers inside inline code blocks (like
-                    <code>(</code> or <code>\</code>) are rendered as literal
+                    <code>(</code> or <code>\\</code>) are rendered as literal
                     characters and are not parsed as formatting.
                 </p>
             </li>
@@ -86,16 +86,16 @@
                 <p>
                     In order to render the special characters (<code>(</code>,
                     <code>)</code>, <code>[</code>, <code>]</code>,
-                    <code>:</code>, <code>\</code>, <code>` </code>), it is
+                    <code>:</code>, <code>\\</code>, <code>` </code>), it is
                     sufficient to escape them by preceding them with a backslash
-                    character (e.g. <code>\(</code>, <code>\)</code>,
-                    <code>\[\]</code>, <code>\]</code>, <code>\:</code>, <code>\\</code>,
-                    <code>\` </code>).
+                    character (e.g. <code>\\(</code>, <code>\\)</code>,
+                    <code>\\[\\]</code>, <code>\\]</code>, <code>\\:</code>, <code>\\\\</code>,
+                    <code>\\` </code>).
                 </p>
             </li>
             <li>
                 <p>
-                    Double backslashes (<code>\\</code>) are rendered as a
+                    Double backslashes (<code>\\\\</code>) are rendered as a
                     single literal backslash in the visible output.
                 </p>
             </li>
@@ -103,7 +103,7 @@
                 <p>
                     It is guaranteed that every backslash in the input is
                     followed by a special character, except in inline codes and
-                    after an escaped backslash (<code>\\</code>).
+                    after an escaped backslash (<code>\\\\</code>).
                 </p>
             </li>
         </ul>

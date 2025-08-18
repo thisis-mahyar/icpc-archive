@@ -44,15 +44,15 @@ VALUES
         <p>
             The first line contains three integers $m$ (number of missiles), $n$ (number
             of strategic resources), and $d$ (number of air defence systems), where ($0
-            \le m, n, d \le 5000$).
+            \\le m, n, d \\le 5000$).
         </p>
         <p>
-            The next $n$ lines contain two integers $x_i$ and $y_i$ ($0 \le x_i, y_i \le
+            The next $n$ lines contain two integers $x_i$ and $y_i$ ($0 \\le x_i, y_i \\le
             10 ^ 9$) the coordinates of the $i ^ {th}$ strategic resource.
         </p>
         <p>
             The following $d$ lines each contain three integers $x_j$, $y_j$ and $r_j$
-            ($0 \le x_j, y_j \le 10 ^ 9; 0 \le r_j \le 10 ^ 9$) the coordinates of the
+            ($0 \\le x_j, y_j \\le 10 ^ 9; 0 \\le r_j \\le 10 ^ 9$) the coordinates of the
             $j ^ {th}$ air defence system and its radius of protection.
         </p>
         ',

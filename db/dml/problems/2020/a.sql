@@ -50,11 +50,11 @@ VALUES
         '
         <p>
             The input consists of two lines. The first line contains an integer $p$ ($0
-            \le p \le 1000$), showing the average number of new cases per day in every
+            \\le p \\le 1000$), showing the average number of new cases per day in every
             one million population in Hana''s city over the past two weeks. The second
-            line contains an integer $q$ ($0 \le q \le 500$), showing the average number
+            line contains an integer $q$ ($0 \\le q \\le 500$), showing the average number
             of new hospitalizations per day in every one million population over the
-            past two weeks in that city. Note that $q \le p$.
+            past two weeks in that city. Note that $q \\le p$.
         </p>
         ',
         '

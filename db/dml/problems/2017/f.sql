@@ -32,16 +32,16 @@ VALUES
         '
         <p>
             There are multiple test cases in the input. The first line of each test case
-            contains three positive integers $n$, $m$ and $k$ ($0 \le m, k \le 10,000$
-            and $1 \le n \le 1,000$ where $n$ is the number of trees, and $m$ and $k$
+            contains three positive integers $n$, $m$ and $k$ ($0 \\le m, k \\le 10,000$
+            and $1 \\le n \\le 1,000$ where $n$ is the number of trees, and $m$ and $k$
             are the number of the intermediate vertices of the Soroush''s path
             and his dog''s path, respectively. The next two lines contain the $x$ and
-            $y$ coordinates of the entrance point $s$ and the exit point $t$ ($s \neq
+            $y$ coordinates of the entrance point $s$ and the exit point $t$ ($s \\neq
             t$) in that order. The next $n$ lines present the $x$ and $y$ coordinates of
-            the trees. Let Soroush''s path and his dog''s path be $s, v_1, \dots,
-            v_m, t$ and $s, u_1, \dots, u_k, t$, respectively. At the end, the $x$ and
-            $y$ coordinates of $v_1, \dots, v_m$ come in $m$ lines in order and then the
-            $x$ and $y$ coordinates of $u_1, \dots, u_k$ come in $k$ lines in order.
+            the trees. Let Soroush''s path and his dog''s path be $s, v_1, \\dots,
+            v_m, t$ and $s, u_1, \\dots, u_k, t$, respectively. At the end, the $x$ and
+            $y$ coordinates of $v_1, \\dots, v_m$ come in $m$ lines in order and then the
+            $x$ and $y$ coordinates of $u_1, \\dots, u_k$ come in $k$ lines in order.
             Note that the paths may have self-intersections or intersect each other.
             There is no tree on the Soroush''s path or his dog''s path including
             $s$ and $t$. You can assume all input coordinates are integers whose

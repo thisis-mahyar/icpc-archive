@@ -59,7 +59,7 @@ VALUES
         '
         <p>
             Each line of the input contains the information of one student. For each
-            student, there are two positive integers $c$ and $d$ ($1 \le c, d \le 1000$)
+            student, there are two positive integers $c$ and $d$ ($1 \\le c, d \\le 1000$)
             that show the amount of call (in minutes) and data usage (in megabytes) for
             the student, respectively. The input terminates with <code>0 0</code> that
             should not be processed.

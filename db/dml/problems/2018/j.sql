@@ -33,8 +33,8 @@ VALUES
         '
         <p>
             The first line of the input contains two positive integers $r$ and $c$ ($3
-            \le r, c \le 200$) denoting the number of rows and columns of the given
-            picture, respectively. Precisely, the picture is an $r \times c$ table of
+            \\le r, c \\le 200$) denoting the number of rows and columns of the given
+            picture, respectively. Precisely, the picture is an $r \\times c$ table of
             pixels. The next $r$ lines, each contains exactly $c$ characters. Each
             character is <code>+</code>, <code>-</code>, or <code>.</code> representing
             a pixel of the picture. A dash pixel illustrates one unit of a horizontal

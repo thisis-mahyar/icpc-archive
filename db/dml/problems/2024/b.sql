@@ -50,22 +50,22 @@ VALUES
         ',
         '
         <p>
-            The first line of input contains a single integer $n$ ($1 \le n \le 1000$),
+            The first line of input contains a single integer $n$ ($1 \\le n \\le 1000$),
             representing the number of employees in the company. The following $n$ lines
             each provide three integers $x$, $k$ and $h$, which describe the details for
             each employee:
         </p>
         <ul>
             <li>
-                $x$ ($100 \le x \le 10 ^ 6$): The hourly wage in Rials, which is always
+                $x$ ($100 \\le x \\le 10 ^ 6$): The hourly wage in Rials, which is always
                 a multiple of 10.
             </li>
             <li>
-                $k$ ($0 \le k \le 480$): The total number of hours worked during the
+                $k$ ($0 \\le k \\le 480$): The total number of hours worked during the
                 current month.
             </li>
             <li>
-                $h$ ($0 \le h \le k$): The number of holiday hours worked.
+                $h$ ($0 \\le h \\le k$): The number of holiday hours worked.
             </li>
         </ul>
         ',

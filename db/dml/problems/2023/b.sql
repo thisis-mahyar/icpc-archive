@@ -32,7 +32,7 @@ VALUES
         '
         <p>
             The input consists of two lines. The first line contains a single integer
-            $n$ ($1 \le n \le 100$), the number of chapters in the report. The second
+            $n$ ($1 \\le n \\le 100$), the number of chapters in the report. The second
             line contains $n$ space-separated integers, denoting the number of pages in
             each chapter. All numbers in the input are positive integers and are at most
             100.

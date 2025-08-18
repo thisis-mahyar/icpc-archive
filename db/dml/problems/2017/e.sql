@@ -22,7 +22,7 @@ VALUES
             helicopter in the Barareh village.
         </p>
         <p>
-            Suppose the Barareh village is represented by an $n \times m$ grid. At the
+            Suppose the Barareh village is represented by an $n \\times m$ grid. At the
             initial time, some grid cells are on fire. If a cell catches fire at time
             $x$, all its 8 vertex-neighboring cells will catch fire at time $x + k$. If
             a cell catches fire, it will be on fire forever. At the initial time,
@@ -40,8 +40,8 @@ VALUES
         '
         <p>
             There are multiple test cases in the input. The first line of each test case
-            contains three positive integers $n$, $m$ and $k$ ($1 \le n, m, k \le 100$),
-            where $n$ and $m$ indicate the size of the test case grid $n \times m$, and
+            contains three positive integers $n$, $m$ and $k$ ($1 \\le n, m, k \\le 100$),
+            where $n$ and $m$ indicate the size of the test case grid $n \\times m$, and
             $k$ denotes the growth rate of fire. The next $n$ lines, each contains a
             string of length $m$, where the $j$th character of the $i$th line represents
             the cell ($i, j$) of the grid. Cells which are on fire at time 0, are

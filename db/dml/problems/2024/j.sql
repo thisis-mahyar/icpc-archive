@@ -15,13 +15,13 @@ VALUES
         'Parking Theory',
         '
         <p>
-            Sharif University has a rectangular parking lot with $n \times m$ spaces for
+            Sharif University has a rectangular parking lot with $n \\times m$ spaces for
             cars. Each row and column of the parking lot has entrances at both ends.
         </p>
         <p>
             The parking lot is full and the order in which the cars entered is given for
             each parking space. Specifically, a cell with the number 1 is the first car
-            that entered the parking lot, and a cell with the number $n \cdot m$ is the
+            that entered the parking lot, and a cell with the number $n \\cdot m$ is the
             last one to enter.
         </p>
         <p>
@@ -43,10 +43,10 @@ VALUES
         ',
         '
         <p>
-            The first line of input contains two integers $n$ and $m$ ($1 \le n, m \le
+            The first line of input contains two integers $n$ and $m$ ($1 \\le n, m \\le
             500$), the number of rows and columns of the parking lot. Each of the
             following $n$ lines contains $m$ integers, indicating the order of entry of
-            the cars. It is guaranteed that numbers are different between 1 and $n \cdot
+            the cars. It is guaranteed that numbers are different between 1 and $n \\cdot
             m$.
         </p>
         ',

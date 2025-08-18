@@ -35,8 +35,8 @@ VALUES
         '
         <p>
             The input consists of two lines. The first line contains an integer $n$ ($0
-            \le n \le 200$), specifying the amount of petrol that will be used in the
-            next month. The second line contains an integer $k$ ($0 \le k \le 360$),
+            \\le n \\le 200$), specifying the amount of petrol that will be used in the
+            next month. The second line contains an integer $k$ ($0 \\le k \\le 360$),
             showing the quota left in Mahya''s fuel card at the end of current month.
         </p>
         ',

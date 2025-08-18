@@ -44,7 +44,7 @@ VALUES
         ',
         '
         <p>
-            The first line of the input contains a positive integer $n$ ($1 \le n \le
+            The first line of the input contains a positive integer $n$ ($1 \\le n \\le
             1000$), the number of the registered email addresses. Each of the next $n$
             lines contains one email address of length at most 100 and consisting of
             alphabets, digits, ''<code>@</code>'', ''<code>.</code>'', ''<code>_</code>'', and

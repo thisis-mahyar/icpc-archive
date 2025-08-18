@@ -38,14 +38,14 @@ VALUES
         ',
         '
         <p>
-            The first line of the input contains two integers $n$ ($4 \le n \le 24$) and
-            $m$ ($1 \le m \le \frac {n . (n - 1)} {2}$). The following $m$ lines are the
-            road descriptions. The $i$-th road has three integers: $u_i$ ($1 \le u_i \le
-            n$), $v_i$ ($1 \le v_i \le n$), and $w_i$ ($1 \le w_i \le 1000$) denoting
+            The first line of the input contains two integers $n$ ($4 \\le n \\le 24$) and
+            $m$ ($1 \\le m \\le \\frac {n . (n - 1)} {2}$). The following $m$ lines are the
+            road descriptions. The $i$-th road has three integers: $u_i$ ($1 \\le u_i \\le
+            n$), $v_i$ ($1 \\le v_i \\le n$), and $w_i$ ($1 \\le w_i \\le 1000$) denoting
             its two end-vertices and its length. There are no self-loops and multiple
             edges in the given map and all roads are bidirectional. The last line
-            contains 4 integer: $s_1, t_1, s_2$, and $t_2$ ($1 \le s_1, t_1, s_2, t_2
-            \le n$); the numbers of the start and the final intersections of Javad''s
+            contains 4 integer: $s_1, t_1, s_2$, and $t_2$ ($1 \\le s_1, t_1, s_2, t_2
+            \\le n$); the numbers of the start and the final intersections of Javad''s
             route and Jalal''s route, respectively. It is guaranteed that all these
             numbers are distinct. It is guaranteed that the given map is connected,
             i.e., there is a path between any two intersections.

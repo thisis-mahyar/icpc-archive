@@ -33,12 +33,12 @@ VALUES
         ',
         '
         <p>
-            The first line of input contains two integers $n$ and $m$ ($1 \le n \le 10 ^
-            5, 1 \le m \le 10 ^ 6$), describing the number of pistons and the length of
+            The first line of input contains two integers $n$ and $m$ ($1 \\le n \\le 10 ^
+            5, 1 \\le m \\le 10 ^ 6$), describing the number of pistons and the length of
             cylinders, respectively. Each of the next $n$ lines describe the position
             and direction of a single piston. The ($i + 1$) $^ {th}$ line of the input
-            contains an integer $p_i$ ($0 \le p_i \le m$), and a character $d_i$ ($d_i
-            \in$ <code>{U, D}</code>), the initial position of the $i ^ {th}$ piston and
+            contains an integer $p_i$ ($0 \\le p_i \\le m$), and a character $d_i$ ($d_i
+            \\in$ <code>{U, D}</code>), the initial position of the $i ^ {th}$ piston and
             its direction (Up or Down), respectively.
         </p>
         ',

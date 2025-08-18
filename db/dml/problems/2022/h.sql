@@ -16,7 +16,7 @@ VALUES
         '
         <p>
             Hezardastan, a leading information technology group in Iran, has a huge data
-            center containing $n$ servers and $m$ terminals (where $m \le n$). A
+            center containing $n$ servers and $m$ terminals (where $m \\le n$). A
             terminal is a pair of keyboard and monitor that can be connected to a server
             for administrative purposes. The servers are numbered 1 through $n$ and the
             terminals are numbered 1 through $m$. This data center has a network
@@ -47,11 +47,11 @@ VALUES
         '
         <p>
             The first line of input contains two integers $m$ and $n$ separated with a
-            single space ($ 1 \le m \le 150, 1 \le n \le 400, m \le n$). The next $m$
-            lines describe the network topology by an $m \times n$ matrix. Each of these
+            single space ($ 1 \\le m \\le 150, 1 \\le n \\le 400, m \\le n$). The next $m$
+            lines describe the network topology by an $m \\times n$ matrix. Each of these
             lines contains $n$ space-separated integers which are either 0 or 1. The
-            $j$-th number (for $1 \le j \le n$) in the ($1 + i$)-th line of input (for
-            $1 \le i \le m$) is 1 if terminal $i$ can connect to server $j$, and it is 0
+            $j$-th number (for $1 \\le j \\le n$) in the ($1 + i$)-th line of input (for
+            $1 \\le i \\le m$) is 1 if terminal $i$ can connect to server $j$, and it is 0
             otherwise.
         </p>
         ',

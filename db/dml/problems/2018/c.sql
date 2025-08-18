@@ -37,7 +37,7 @@ VALUES
         '
         <p>
             The first line contains three non-negative integers $n$, $m$, and $k$ ($1
-            \le n \cdot m \le 3 \times 10 ^ 5, 0 \le k \le 10 ^ 12$) which are the
+            \\le n \\cdot m \\le 3 \\times 10 ^ 5, 0 \\le k \\le 10 ^ 12$) which are the
             number of rows, the number of seats in each row, and the total comfortness
             that can be added to all seats. The next $n$ lines describe the comfort
             values of seats; each line contains $m$ non-negative integers not more than

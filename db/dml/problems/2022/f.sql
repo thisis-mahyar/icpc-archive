@@ -15,7 +15,7 @@ VALUES
         'Ammunition Storage',
         '
         <p>
-            The Do-Barareh military area is like an $n \times m$ grid, each cell of
+            The Do-Barareh military area is like an $n \\times m$ grid, each cell of
             which has a specific height. The commander of this military area is looking
             for a rectangular sub-area of this area, with width and height least 2,
             whose its four corner cells are higher than the rest of its cells. He plans
@@ -28,7 +28,7 @@ VALUES
         '
         <p>
             The first line of input contains two space-separated integers $n$ and $m$
-            ($2 \le n, m \le 750$). Each of the next $n$ lines contains $m$
+            ($2 \\le n, m \\le 750$). Each of the next $n$ lines contains $m$
             space-separated integers showing the cell heights. It is guaranteed cell
             heights are distinct numbers between 1 and $nm$ (inclusive).
         </p>

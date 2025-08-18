@@ -17,7 +17,7 @@ VALUES
         <p>
             Peyman has decided to host a dinner party in his house at Zabol. His house
             has a rectangular parking lot which can be represented by a grid with $n$
-            rows and $m$ columns. A car can park in one of the $n \times m$ cells in
+            rows and $m$ columns. A car can park in one of the $n \\times m$ cells in
             this grid. However, some cells are occupied by immovable pillars and thus,
             no car can park in or pass through them. Each row or column in the parking
             lot has an entrance on both its ends. When a car enters the parking lot
@@ -37,7 +37,7 @@ VALUES
         '
         <p>
             The first line of input contains two space-separated integers $n$ and $m$
-            ($1 \le n, m \le 1000$), the number of rows and columns in the parking lot,
+            ($1 \\le n, m \\le 1000$), the number of rows and columns in the parking lot,
             respectively. Each of the following $n$ lines contain a string of length $m$
             made of<code>.</code> and<code>o</code> characters. the $j$-th character of
             the ($i + 1$)-th line is an <code>o</code> if the cell in row $i$ and column

@@ -19,8 +19,8 @@ VALUES
             like this:
         </p>
         <p>
-            \[ x + 2 \] $\begin{array}{r} \phantom{+}123 \ + \phantom{}456 \ \hline
-            \phantom{+}579 \end{array}$
+            \\[ x + 2 \\] $\\begin{array}{r} \\phantom{+}123 \\ + \\phantom{}456 \\ \\hline
+            \\phantom{+}579 \\end{array}$
         </p>
         <p>
             A multi-digit column addition is written on the blackboard, but the sum is
@@ -29,9 +29,9 @@ VALUES
             obtain a correct addition by erasing the second and the forth columns.
         </p>
         <p>
-            $\begin{array}{r} \phantom{+}12127 \ + \phantom{}45618 \ \hline
-            \phantom{+}51825 \end{array} \quad\Rightarrow\quad \begin{array}{r}
-            \phantom{+}117 \ + \phantom{}468 \ \hline \phantom{+}585 \end{array}$
+            $\\begin{array}{r} \\phantom{+}12127 \\ + \\phantom{}45618 \\ \\hline
+            \\phantom{+}51825 \\end{array} \\quad\\Rightarrow\\quad \\begin{array}{r}
+            \\phantom{+}117 \\ + \\phantom{}468 \\ \\hline \\phantom{+}585 \\end{array}$
         </p>
         <p>
             Your task is to find the minimum number of columns needed to be erased such
@@ -42,7 +42,7 @@ VALUES
         <p>
             There are multiple test cases in the input. Each test case starts with a
             line containing the single integer $n$, the number of digit columns in the
-            addition ($1 \le n \le 1000$). Each of the next 3 lines contain a string of
+            addition ($1 \\le n \\le 1000$). Each of the next 3 lines contain a string of
             $n$ digits. The number on the third line is presenting the (not necessarily
             correct) sum of the numbers in the first and the second line. The input
             terminates with a line containing <code>0</code> which should not be

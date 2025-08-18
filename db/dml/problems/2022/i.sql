@@ -74,7 +74,7 @@ VALUES
             simplicity, we assume that each windcatcher is a point in two dimensions,
             and no two windcatchers lie on the same point. Moreover, we assume that
             there are at least three noncollinear windcatchers in the city. It is
-            guaranteed that $3 \le n \le 4,000$ and $0 \le x, y \le 10 ^ 9$
+            guaranteed that $3 \\le n \\le 4,000$ and $0 \\le x, y \\le 10 ^ 9$
         </p>
         ',
         '

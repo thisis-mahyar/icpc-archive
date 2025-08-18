@@ -64,7 +64,7 @@ VALUES
         </p>
         <ul>
             <li>
-                The first line contains an integer $b$ ($0 \le b \le 10 ^ 6$),
+                The first line contains an integer $b$ ($0 \\le b \\le 10 ^ 6$),
                 representing Mahya''s budget in Rials.
             </li>
             <li>

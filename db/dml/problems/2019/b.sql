@@ -33,11 +33,11 @@ VALUES
         ',
         '
         <p>
-            The first line of the input contains two integers $c$ ($0 \le c \le 3000$),
-            Dr. Predictman''s initial savings in Oshloobs, and $n$ ($0 \le n \le 30$),
+            The first line of the input contains two integers $c$ ($0 \\le c \\le 3000$),
+            Dr. Predictman''s initial savings in Oshloobs, and $n$ ($0 \\le n \\le 30$),
             the period of his prediction. Each of the next following $n$ lines contains
-            an integer $p_i$ ($1000 \le p_i \le 2000$) denoting the price of a gold coin
-            at day $i$ ($1 \le i \le n$) in Oshloobs.
+            an integer $p_i$ ($1000 \\le p_i \\le 2000$) denoting the price of a gold coin
+            at day $i$ ($1 \\le i \\le n$) in Oshloobs.
         </p>
         ',
         '

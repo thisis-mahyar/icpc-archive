@@ -79,18 +79,18 @@ VALUES
                 <p>
                     <code>next</code> $i$: Write the next $i$ digits starting at the
                     current position into $S$. More specifically, if Dr. Watson''s cursor
-                    is before position $c$, he should pick digits $c, c + 1, \dots, c +
+                    is before position $c$, he should pick digits $c, c + 1, \\dots, c +
                     i - 1$ but the position of the cursor remains unchanged.
                 </p>
             </li>
             <li>
                 <p>
-                    <code>pick</code> $i \ j$: If $i &lt; j$, write digits into $S$ from
-                    the position $i$ to $j$ ($ i , i + 1 , \dots , j $) of the current
+                    <code>pick</code> $i \\ j$: If $i &lt; j$, write digits into $S$ from
+                    the position $i$ to $j$ ($ i , i + 1 , \\dots , j $) of the current
                     phone number, which is the one that the digit after the cursor
-                    belongs to. Otherwise, he should write ($ i , i - 1 , \dots , j $).
+                    belongs to. Otherwise, he should write ($ i , i - 1 , \\dots , j $).
                     Again, the position of the cursor remains the same. Note that, $0
-                    \le i , j \le 10$ and <code>pick 0 0</code> will pick the first
+                    \\le i , j \\le 10$ and <code>pick 0 0</code> will pick the first
                     digit.
                 </p>
             </li>
@@ -108,7 +108,7 @@ VALUES
         '
         <p>
             The input consists of the phonebook''s content and Sherlock''s instructions.
-            The phonebook contains $n$ phone numbers ($1 \le n \le 1000$), separated by
+            The phonebook contains $n$ phone numbers ($1 \\le n \\le 1000$), separated by
             commas or newlines. Each phone number in the phonebook is a string,
             consisting of 10 or 11 digits (<code>0-9</code>) and possibly hyphens ("-")
             and/or spaces characters. The size of the phonebook, i.e. the number of

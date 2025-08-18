@@ -20,8 +20,8 @@ VALUES
             Hence, we can show the DNA ofa Mars alien by a binary string. Let $s$ be
             an alien DNA of length $n$. There are $q$ regions in the DNA specified as
             <em>genes</em>. A gene located at $[a, b]$ is a substring of the DNA,
-            containing characters from position $a$ to position $b$, inclusive ($1 \le a
-            \le b \le n$). A gene might overlap with or be inside the other genes.
+            containing characters from position $a$ to position $b$, inclusive ($1 \\le a
+            \\le b \\le n$). A gene might overlap with or be inside the other genes.
         </p>
         <p>
             During the life of a Mars alien, each gene is copied billions of times: a
@@ -46,10 +46,10 @@ VALUES
         '
         <p>
             There are multiple test cases in the input. The first line of each test case
-            contains two integers $n$ and $q$ ($2 \le n \le 10,000$ and $1 \le q \le
+            contains two integers $n$ and $q$ ($2 \\le n \\le 10,000$ and $1 \\le q \\le
             1000$). The next line contains a binary string $s$ of length $n$. Each of
             the next $q$ lines contains the location $[a, b]$ of a gene, in the form of
-            two space-separated integers $a$ and $b$ ($1 \le a \le b \le n$). The input
+            two space-separated integers $a$ and $b$ ($1 \\le a \\le b \\le n$). The input
             terminates with a line containing <code>0 0</code> that should not be
             processed.
         </p>

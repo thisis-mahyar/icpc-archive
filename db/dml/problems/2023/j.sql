@@ -35,12 +35,12 @@ VALUES
         ',
         '
         <p>
-            The first line of input consists of two integers $n$ and $k$ $1 \le k \le n
-            \le 10 ^ 5$) where $n$ represents the total number of applications and $k$
+            The first line of input consists of two integers $n$ and $k$ $1 \\le k \\le n
+            \\le 10 ^ 5$) where $n$ represents the total number of applications and $k$
             represents the minimum number of applications in an advertisement image. The
             following $n$ lines contain information about each application: the $i ^
             {th}$ line contain $c_i$, representing the number of users for the $i ^
-            {th}$ application ($1 \le c_i \le 10 ^ 8$).
+            {th}$ application ($1 \\le c_i \\le 10 ^ 8$).
         </p>
         ',
         '

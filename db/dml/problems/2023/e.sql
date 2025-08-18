@@ -15,7 +15,7 @@ VALUES
         'Largest Triangle',
         '
         <p>
-            A "terrain" is an $x$-monotone polygon defined by the points $p_1, \dots,
+            A "terrain" is an $x$-monotone polygon defined by the points $p_1, \\dots,
             p_n$ where each point $p_i$ has coordinates ($x_i, y_i$), and the following
             three conditions hold:
         </p>
@@ -27,7 +27,7 @@ VALUES
                 $y_i &gt; 0$ for $1 &lt; i &lt; n$
             </li>
             <li>
-                $x_i &lt; x_{i + 1}$ for $1\le i &lt; n$
+                $x_i &lt; x_{i + 1}$ for $1\\le i &lt; n$
             </li>
         </ul>
 
@@ -35,7 +35,7 @@ VALUES
             <img alt = "Image" src = "../../img/2023/e.png">
         </p>
         <p>
-            Given a terrain defined by the points $p_1, \dots, p_n$, find the largest
+            Given a terrain defined by the points $p_1, \\dots, p_n$, find the largest
             triangle that fits entirely within the terrain, and one of its three
             vertices is positioned at one of the terrain points $p_2$ through $p_{n
             - 1}$.
@@ -44,9 +44,9 @@ VALUES
         '
         <p>
             The first line of input contains an integer $n$, representing the number of
-            points in the terrain ($3 \le n \le 10 ^ 5$). The $i ^ {th}$ line in the
+            points in the terrain ($3 \\le n \\le 10 ^ 5$). The $i ^ {th}$ line in the
             following $n$ lines consists of two space-separated integers $x_i$ and
-            $y_i}$, representing the point $p_i$ of the terrain ($0 \le x_i, y_i \le 10
+            $y_i}$, representing the point $p_i$ of the terrain ($0 \\le x_i, y_i \\le 10
             ^ 9$).
         </p>
         ',

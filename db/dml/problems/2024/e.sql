@@ -45,20 +45,20 @@ VALUES
         <ul>
             <li>
                 <p>
-                    The first line contains three integers $W$, $H$ and $n$ ($1 \le W, H
-                    \le 10 ^ 8$; $1 \le n \le 10 ^ 6$).
+                    The first line contains three integers $W$, $H$ and $n$ ($1 \\le W, H
+                    \\le 10 ^ 8$; $1 \\le n \\le 10 ^ 6$).
                 </p>
             </li>
             <li>
                 <p>
-                    Each of the next $n$ lines contains an integer $h_i$ ($1 \le h_i \le
+                    Each of the next $n$ lines contains an integer $h_i$ ($1 \\le h_i \\le
                     H$)
                 </p>
             </li>
             <li>
                 <p>
                     Each of the next $n$ lines contains two integers $x_i$ and $y_i$ ($1
-                    \le x_i \le W; 1 \le y_i \le H$)
+                    \\le x_i \\le W; 1 \\le y_i \\le H$)
                 </p>
             </li>
         </ul>

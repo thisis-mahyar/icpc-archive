@@ -36,11 +36,11 @@ VALUES
         ',
         '
         <p>
-            The first line of the input contains an integer $n$ ($0 \le n \le 100$),
+            The first line of the input contains an integer $n$ ($0 \\le n \\le 100$),
             specifying the number of buildings in the TetrisCity. Each of the next $n$
-            lines contains 5 space-separated integers $x$, $y$, $x ^ \prime$, $y ^
-            \prime$ and $h$ specifying a building: the coordinates ($x, y $) and ($x ^
-            \prime, y ^ \prime$) respectively specify the west-south corner and the
+            lines contains 5 space-separated integers $x$, $y$, $x ^ \\prime$, $y ^
+            \\prime$ and $h$ specifying a building: the coordinates ($x, y $) and ($x ^
+            \\prime, y ^ \\prime$) respectively specify the west-south corner and the
             east-north corner of the building, and $h$ determines its height. It is
             guaranteed that the volume of the building is not zero. The source and
             destination appear at the end of the input in two separated lines; each

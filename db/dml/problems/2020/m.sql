@@ -16,9 +16,9 @@ VALUES
         '
         <p>
             A histogram is a simple rectilinear polygon $H$ (i.e. the interior angle at
-            each vertex is either $90 ^ \circ$ or $270 ^ \circ$) that has a horizontal
+            each vertex is either $90 ^ \\circ$ or $270 ^ \\circ$) that has a horizontal
             edge seeing every point $q$ inside (i.e. the interior or the boundary of)
-            $H$. Here, we say that an edge sees a point $q \in H$ if there is a vertical
+            $H$. Here, we say that an edge sees a point $q \\in H$ if there is a vertical
             segment $s$ connecting $e$ to $q$ that is lying inside $H$.
         </p>
         <p>
@@ -37,7 +37,7 @@ VALUES
         '
         <p>
             The first line of the input contains two positive integers $m$ and $n$ ($1
-            \le m, n \le 50$) denoting the number of rows and the number of columns of
+            \\le m, n \\le 50$) denoting the number of rows and the number of columns of
             the table illustrating the histogram, respectively. The next $m$ lines, each
             contains exactly $n$ characters. <code>*</code>s denote the boundary of the
             histogram. The rest is filled with dots (<code>.</code>). Each edge of the

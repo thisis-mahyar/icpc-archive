@@ -24,19 +24,19 @@ VALUES
             types of shuffles.
         </p>
         <p>
-            Assume the cards in the deck are $\langle c_1, c_2, \dots, c_{2n}
-            \rangle$. Mahsa can perform these two shuffles as many times as she wants:
+            Assume the cards in the deck are $\\langle c_1, c_2, \\dots, c_{2n}
+            \\rangle$. Mahsa can perform these two shuffles as many times as she wants:
         </p>
         <p>
-            <strong>Riffle:</strong> Divide the cards into two parts $\langle c_1,
-            \dots, c_n \rangle$ and $\langle c_{n + 1}, \dots, c_{2n} \rangle$
-            and produce $\langle c_1, c_{n + 1}, c_2, c_{n + 2}, \dots,
-            c_n, c_{2n} \rangle$.
+            <strong>Riffle:</strong> Divide the cards into two parts $\\langle c_1,
+            \\dots, c_n \\rangle$ and $\\langle c_{n + 1}, \\dots, c_{2n} \\rangle$
+            and produce $\\langle c_1, c_{n + 1}, c_2, c_{n + 2}, \\dots,
+            c_n, c_{2n} \\rangle$.
         </p>
         <p>
-            <strong>Scuffle:</strong> From $\langle c_1, c_2, \dots, c_{2n}
-            \rangle$, produce $\langle c_2, c_1, c_4, c_3, \dots, c_{2n}, c_{2n -
-            1} \rangle$.
+            <strong>Scuffle:</strong> From $\\langle c_1, c_2, \\dots, c_{2n}
+            \\rangle$, produce $\\langle c_2, c_1, c_4, c_3, \\dots, c_{2n}, c_{2n -
+            1} \\rangle$.
         </p>
         <p>
             Help Mahsa find out the minimum number of shuffles she needs, and she''ll
@@ -46,7 +46,7 @@ VALUES
         '
         <p>
             The input consists of a single line containing three space-separated
-            integers $n$, $i$ and $j$ ($1 \le n \le 10 ^ 5$ and $1 \le i, j \le 2n$).
+            integers $n$, $i$ and $j$ ($1 \\le n \\le 10 ^ 5$ and $1 \\le i, j \\le 2n$).
         </p>
         ',
         '

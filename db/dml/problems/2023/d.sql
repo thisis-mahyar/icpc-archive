@@ -29,7 +29,7 @@ VALUES
         <p>
             Abolf currently resides in city 1 and wants to plan his summer trip. If at
             any point during his trip Abolf''s happiness drops below zero, he would stop
-            his trip immediately. For each city $t$ (for $2 \le t \le n$), Abolf wants
+            his trip immediately. For each city $t$ (for $2 \\le t \\le n$), Abolf wants
             to know what is the minimum amount of coins he should pay to reach city $t$
             while making sure that his happiness remains non-negative at all time,
             including at the destination.
@@ -42,15 +42,15 @@ VALUES
         ',
         '
         <p>
-            The first line of input contains two integers $n$ and $k$ ($2 \le n \le 3
-            \cdot 10 ^ 5, 1 \le k \le 10 ^ 9$), the number of cities in Aboland and
+            The first line of input contains two integers $n$ and $k$ ($2 \\le n \\le 3
+            \\cdot 10 ^ 5, 1 \\le k \\le 10 ^ 9$), the number of cities in Aboland and
             Abolf''s happiness after he drinks a cup of tea, respectively. Each of the
             next $n - 1$ lines contains three space-separated integers $v_i$, $u_i$, and
-            $c_i$ ($1 \le v_i, u_i \le n, 1 \le c_i \le 10 ^ 9, u_i \neq v_i$)
+            $c_i$ ($1 \\le v_i, u_i \\le n, 1 \\le c_i \\le 10 ^ 9, u_i \\neq v_i$)
             indicating that the $i ^ {th}$ road connects city $u_i$ and city $v_i$, and
             Abolf should pay $c_i$ coins each time he travels through this road. The
-            last line contains $n$ integers $a_1, a_2, \dots, a_n$ ($0 \le a _ {
-            i } \le 1$). If $a_i = 1$, there is an Abolbucks branch in city $i$. It is
+            last line contains $n$ integers $a_1, a_2, \\dots, a_n$ ($0 \\le a _ {
+            i } \\le 1$). If $a_i = 1$, there is an Abolbucks branch in city $i$. It is
             guaranteed that $a_1 = 1$.
         </p>
         ',

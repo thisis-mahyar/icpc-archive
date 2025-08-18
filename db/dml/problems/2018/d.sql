@@ -40,28 +40,28 @@ VALUES
             of Nader Shah''s life. The map has all the road network on it with their
             lengths in kilometers. Afshari roads are marked in the map. There are $n$
             countries on the map, $m$ roads connecting them, and $n - 1$ of those roads
-            marked as Afshari. Each country is marked by a distinct number $1 \le x \le
+            marked as Afshari. Each country is marked by a distinct number $1 \\le x \\le
             n$. We do not distinguish between the numbers and the countries.
         </p>
         <p>
             Given the map described above, we want to know the possible country
             corresponding to Iran and the order by which Nader Shah captured countries.
-            One possible answer can be shown as $a_1, a_2, \dots, a_n$ where $a_1$
+            One possible answer can be shown as $a_1, a_2, \\dots, a_n$ where $a_1$
             corresponds to Iran, $a_2$ is the first country that Nader Shah captured,
             $a_3$ is the second country he captured, and so on. We want to know the
-            lexicographically minimum possible answer. Array $x_1, x_2, \dots, x_n$ is
-            lexicographically smaller than $y_1, y_2, \dots, y_n$ if and only if there
-            exists a number $i$ ($1 \le i \le n$) that $(x_1 = y_1) \wedge (x_2 = y_2)
-            \wedge \dots \wedge (x_{i - 1} = y_{i - 1})$ and $x_i \le y_i$.
+            lexicographically minimum possible answer. Array $x_1, x_2, \\dots, x_n$ is
+            lexicographically smaller than $y_1, y_2, \\dots, y_n$ if and only if there
+            exists a number $i$ ($1 \\le i \\le n$) that $(x_1 = y_1) \\wedge (x_2 = y_2)
+            \\wedge \\dots \\wedge (x_{i - 1} = y_{i - 1})$ and $x_i \\le y_i$.
         </p>
         ',
         '
         <p>
-            The first line of the input contains two integers $n$ and $m$ ($ 1 \le n \le
-            1,000, n - 1 \le m \le 5,000$) where $n$ and $m$ are the number of countries
+            The first line of the input contains two integers $n$ and $m$ ($ 1 \\le n \\le
+            1,000, n - 1 \\le m \\le 5,000$) where $n$ and $m$ are the number of countries
             and the number of roads in the map (the road network), respectively. The
             next $m$ lines describe the road network; each line contains four integers
-            $u$, $v$ , $w$ and $r$ ($1 \le u, v \le n, 1 \le w \le 10 ^ 6$, and $r \in
+            $u$, $v$ , $w$ and $r$ ($1 \\le u, v \\le n, 1 \\le w \\le 10 ^ 6$, and $r \\in
             {0, 1}$) which indicate there is a road between $u$ and $v$ with the length
             of $w$ kilometers, and $r$ denotes whether the road is Afshari or not. The
             road is Afshari if and only if $r = 1$. There is at most one road between

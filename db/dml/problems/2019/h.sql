@@ -53,11 +53,11 @@ VALUES
         ',
         '
         <p>
-            The first line of the input contains two integers $q$ ($1 \le q \le
-            100000$), the number of queues, and $n$ ($0 \le n \le 100000$), the number
+            The first line of the input contains two integers $q$ ($1 \\le q \\le
+            100000$), the number of queues, and $n$ ($0 \\le n \\le 100000$), the number
             of tourists in the first picture. The $i$-th line of the next following $q$
             lines describes queue $i - 1$ in the first picture. Each queue description
-            starts with a number $k$ ($0 \le k \le n$) that shows the size of the queue,
+            starts with a number $k$ ($0 \\le k \\le n$) that shows the size of the queue,
             followed by $k$ integers that indicate the tourist numbers in that queue,
             from the back to the front. The tourist numbers are unique and non-negative
             integers less than $n$. In the next following $q$ lines the description of

@@ -24,7 +24,7 @@ VALUES
         </p>
         <p>
             Bob lives in Manhootan. The city of Manhootan is like a grid of $n$ rows and
-            $m$ columns, containing $n \times m$ blocks. The rows are numbered from 0 to
+            $m$ columns, containing $n \\times m$ blocks. The rows are numbered from 0 to
             $n - 1$ from north to south and the columns are numbered from 0 to $m - 1$
             from west to east. The $j$-th block on $i$-th row is worth $A_{ij}$. Before
             the first row, between every two consecutive rows, and after the last row,
@@ -66,16 +66,16 @@ VALUES
         ',
         '
         <p>
-            The first line of input contains two integers $n$ and $m$ ($1 \le n, m \le
+            The first line of input contains two integers $n$ and $m$ ($1 \\le n, m \\le
             200$), the number of rows and columns, respectively. The next $n$ lines
             describe the value of blocks; each containing $m$ numbers, where the $j$-th
-            number of the $i$-th line denotes $A_{ij}$ ($1 \le A_{ij} \le 100$).
+            number of the $i$-th line denotes $A_{ij}$ ($1 \\le A_{ij} \\le 100$).
             The next $n + 1$ lines describe the cost of west-east street segments. Each
             line contain $m$ numbers, where the $j$-th number of the $i$-th line denotes
-            $H_{ij}$ ($1 \le H_{ij} \le 1000$). Finally, the next $m + 1$ lines
+            $H_{ij}$ ($1 \\le H_{ij} \\le 1000$). Finally, the next $m + 1$ lines
             describe the cost of north-south street segments. Each line contains $n$
             numbers, where the $j$-th number of the $i$-th line denotes $V_{ij}$ ($1
-            \le V_{ij} \le 1000$).
+            \\le V_{ij} \\le 1000$).
         </p>
         ',
         '

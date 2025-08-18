@@ -33,16 +33,16 @@ VALUES
             there is a direct wormhole between them. You are given the numbers written
             on each planet, construct a valid sequence of swaps that makes the numbers
             sequence sorted from smallest to largest. Formally, if the number written on
-            the planet number $i$ ($0 \le i \le 2 ^ n$) is denoted by $a_i$, you have to
+            the planet number $i$ ($0 \\le i \\le 2 ^ n$) is denoted by $a_i$, you have to
             construct a sequence of valid pairwise swaps that makes the sequence $a =
-            \langle a_0, a_1, \dots, a_{2 ^ n - 1} \rangle$ in increasing order.
+            \\langle a_0, a_1, \\dots, a_{2 ^ n - 1} \\rangle$ in increasing order.
         </p>
         ',
         '
         <p>
-            The first line of input consists of $n$ ($1 \le n \le 10$), the dimension of
+            The first line of input consists of $n$ ($1 \\le n \\le 10$), the dimension of
             Dr. Khosro''s imaginary world. The next line contains $2 ^ n$ <strong>distinct</strong>
-            integers, indicating $a_0, a_1, \dots, a_{2 ^ n - 1}$ ($0 \le a_i \le
+            integers, indicating $a_0, a_1, \\dots, a_{2 ^ n - 1}$ ($0 \\le a_i \\le
             10 ^ 6$).
         </p>
         ',

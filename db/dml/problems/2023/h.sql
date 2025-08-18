@@ -15,7 +15,7 @@ VALUES
         'Star Wars',
         '
         <p>
-            Amirreza is playing the Star Wars game. This game is played on an $n \times
+            Amirreza is playing the Star Wars game. This game is played on an $n \\times
             m$ board where each cell is either empty (''.''), contains a white piece (''W'')
             or a black piece (''B''). At start of the game, Amirreza should choose exactly
             one white piece to play with. Afterwards he can move this piece multiple
@@ -29,7 +29,7 @@ VALUES
         ',
         '
         <p>
-            The first line contains two integers $n$ and $m$ ($1 \le n, m \le 50$), the
+            The first line contains two integers $n$ and $m$ ($1 \\le n, m \\le 50$), the
             number of rows and columns in the board, respectively. This is followed by
             $n$ lines, each containing $m$ characters. The $j ^ {th}$ character of the
             ($i + 1$) $^ {th}$ line represents cell ($i, j$). Each character is ''W'',

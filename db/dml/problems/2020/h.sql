@@ -57,7 +57,7 @@ VALUES
         '
         <p>
             The input starts with a line containing two space-separated integers $n$ ($1
-            \le n \le 1000$) and $s$ ($1 \le s \le 5000$). The second line contains $n$
+            \\le n \\le 1000$) and $s$ ($1 \\le s \\le 5000$). The second line contains $n$
             space-separated bird names, as the initial configuration of the ritual
             (positioning of the birds in the row, from left to right). Each bird name is
             a non-empty string of at most 10 (lowercase) alphanumeric characters (<code>a</code>

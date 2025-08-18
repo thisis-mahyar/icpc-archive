@@ -37,7 +37,7 @@ VALUES
             roads it has passed so far. The safety of a road is calculated using a
             sensor that stores it as a 60-bit binary number. The drone also stores the
             overall safety in a 60-bit binary number. After passing a road with safety
-            $x_60 x_59 \dots x_1$, the $i$-th bit of the overall safety is flipped if
+            $x_60 x_59 \\dots x_1$, the $i$-th bit of the overall safety is flipped if
             $x_i$ equals 1 and is left untouched otherwise. The safety of the province
             division is the overall safety after the drone finishes its journey. Note
             that initially the overall safety is zero, so if there is no road between
@@ -54,10 +54,10 @@ VALUES
         '
         <p>
             There are multiple test cases in the input. The first line of each test case
-            contains two integers $n$ and $m$ ($2 \le n \le 100$, and $1 \le m \le \frac
+            contains two integers $n$ and $m$ ($2 \\le n \\le 100$, and $1 \\le m \\le \\frac
             {n (n - 1)} 2$), which indicate the number of cites and the total number of
             roads, respectively. The next $m$ lines, each contain three positive
-            integers $u$, $v$ and $r$ ($1 \le u, v \le n, u \ne v$, and $0 \le r \le 2 ^
+            integers $u$, $v$ and $r$ ($1 \\le u, v \\le n, u \\ne v$, and $0 \\le r \\le 2 ^
             60$) which indicate that there is a road between cities $u$ and $v$ with
             safety $r$ (assume that the safety of all roads has been already calculated
             by the drone''s sensor). It is guaranteed that there is at most one road

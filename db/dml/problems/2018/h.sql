@@ -31,7 +31,7 @@ VALUES
         '
         <p>
             The first line of the input contains three positive integers $n$, $a$ and
-            $b$ ($1 \le n \le 10 ^ 5$ and $1 \le a, b \le 10 ^ 5$) where $n$ is the
+            $b$ ($1 \\le n \\le 10 ^ 5$ and $1 \\le a, b \\le 10 ^ 5$) where $n$ is the
             number of base stations, and $a$ and $b$ are radii as defined in the problem
             statement. The second line contains $n$ distinct coordinates of base
             stations on the line with respect to an origin on the line. All coordinates

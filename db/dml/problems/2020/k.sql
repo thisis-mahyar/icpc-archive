@@ -37,13 +37,13 @@ VALUES
             position $x_i$ (i.e. $x_i$ meters from start of the table), from time $s_i$
             to $f_i$ (Times are measured in seconds, from the start of the party). It is
             guaranteed that no two cookies will be at the same position, at the same
-            time; i.e., for every $i$ and $j$ where $i \neq j$ and $x_i = x_j$, either
-            $f_i \le s_j$ or $f_j \le s_i$. More specifically, the table can be
+            time; i.e., for every $i$ and $j$ where $i \\neq j$ and $x_i = x_j$, either
+            $f_i \\le s_j$ or $f_j \\le s_i$. More specifically, the table can be
             considered as a horizontal line on which McFly and the cookies are seen as
             points. McFly can be present at any position before the start of the party.
             At any time afterward, he can fly at the speed of1 meter per second along
             with the table, or stay in place. McFly can taste cookie $i$ if he is at
-            position $x_i$ at some time $t$ where $s_i \le t \le f_i$ Tasting cookies
+            position $x_i$ at some time $t$ where $s_i \\le t \\le f_i$ Tasting cookies
             take no time.
         </p>
         <p>
@@ -52,11 +52,11 @@ VALUES
         ',
         '
         <p>
-            The first line of the input contains the integer $n$ ($1 \le n \le 100000$).
+            The first line of the input contains the integer $n$ ($1 \\le n \\le 100000$).
             The $i$-th line of the next $n$ lines contains three integers $x_i, s_i$ and
-            $f_i$ ($0 \le x_i \le 10 ^ 9, 0 \le s_i \le f_i \le 10 ^ 9$). The total
-            time of cookies being on the table is at most $10 ^ 5$ ($\sum _ {i = 1}
-            ^ {n} f_i - s_i \le 10 ^ 5$).
+            $f_i$ ($0 \\le x_i \\le 10 ^ 9, 0 \\le s_i \\le f_i \\le 10 ^ 9$). The total
+            time of cookies being on the table is at most $10 ^ 5$ ($\\sum _ {i = 1}
+            ^ {n} f_i - s_i \\le 10 ^ 5$).
         </p>
         ',
         '

@@ -55,9 +55,9 @@ VALUES
             There are multiple test cases in the input. The first line of each test case
             contains three positive integers $n$, $k$, $d$, where $n$ and $k$ indicate
             the number of houses owned by the citizens of Demoland and Indoland,
-            respectively, and $d$ indicates the width of the border wall ($1 \le n, k
-            \le 100$) and ($0 \le d &lt; 1,000$). The next $n$ lines, each contains two
-            integers $x$ and $y$ ($0 \le x, y \le 10,000$), where ($x, y$) represents
+            respectively, and $d$ indicates the width of the border wall ($1 \\le n, k
+            \\le 100$) and ($0 \\le d &lt; 1,000$). The next $n$ lines, each contains two
+            integers $x$ and $y$ ($0 \\le x, y \\le 10,000$), where ($x, y$) represents
             the location of a house owned by a citizen of Demoland. Analogously, the
             next $k$ lines represent the location of the houses owned by the citizens
             ofIndoland. Note that no two houses are located in the same position. The

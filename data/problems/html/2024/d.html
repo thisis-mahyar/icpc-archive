@@ -27,20 +27,20 @@
 <!-------------------------------- Input -------------------------------->
 
 <p>
-    The first line of input contains $n$, $m$, and $k$ ($3 \le n \le 10 ^ 5, 3
-    \le m \le 3 . 10 ^ 5, 1 \le k \le 10 ^ 5$), which are the number of base
+    The first line of input contains $n$, $m$, and $k$ ($3 \\le n \\le 10 ^ 5, 3
+    \\le m \\le 3 . 10 ^ 5, 1 \\le k \\le 10 ^ 5$), which are the number of base
     stations, the number of communication links, and the number of attack
     simulations, respectively.
 </p>
 <p>
     In the next $n$ lines, the $i ^ {th}$ line contains the $x$ and $y$
     coordinates of the $i ^ {th}$ base station, both of which are non-negative
-    integers ($0 \le x, y \le 10 ^ 9$). It is guaranteed that not all base
+    integers ($0 \\le x, y \\le 10 ^ 9$). It is guaranteed that not all base
     stations are collinear.
 </p>
 <p>
     Each of the next $m$ lines represents a communication link. Each line
-    contains two integers $i$ and $j$ ($1 \le i, j \le n$), representing a
+    contains two integers $i$ and $j$ ($1 \\le i, j \\le n$), representing a
     communication link as a straight line segment between $i ^ {th}$ and $j ^
     {th}$ base station. The $m$ communication links form a planar graph. The
     outer boundary is a convex polygon and interior faces are all triangles.
@@ -48,8 +48,8 @@
 <p>
     At the end, the attack regions come in $k$ lines. Each attack region is a
     non-empty rectangle, represented by the coordinates $x_1, y_1, x_2, y_2$ of
-    its lower-left and upper-right corners ($0 \le x_1 &lt; x_2 \le 10 ^ 9, 0
-    \le y_1 &lt; y_2 \le 10 ^ 9$). The sides of all rectangles are parallel to
+    its lower-left and upper-right corners ($0 \\le x_1 &lt; x_2 \\le 10 ^ 9, 0
+    \\le y_1 &lt; y_2 \\le 10 ^ 9$). The sides of all rectangles are parallel to
     the coordinate axes. Note that if a base station or some part (even one
     point)of a link lies inside the attack region (including the boundary), it
     is not usable during the attack.

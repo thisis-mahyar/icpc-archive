@@ -25,7 +25,7 @@ VALUES
             However, to install the application secretly, he needs her password which he
             unfortunately does not have. He knows her password is a poly-line consisting
             of vertical or horizontal line segments. Each line segment connects the
-            center of two cells in a $3 \times 3$ grid. Looking at her hand while she
+            center of two cells in a $3 \\times 3$ grid. Looking at her hand while she
             unlocked her phone, Farhad learned the direction of each line segment.
             However, he was too distracted to also learn the length of each segment. He
             also knows that her phone''s operating system does not allow the poly-line to
