@@ -1,0 +1,14 @@
+0912 358 8908
+0872-3344567,0989112-2345
+9899988782
+#
+go 0
+pick 0 3
+next 4
+forward 12
+next 2
+backward 2
+pick 0 1
+go 3
+pick 0 1
+delete 1
