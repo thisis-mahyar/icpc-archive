@@ -1,0 +1,50 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    max-width: 50rem;
+}
+
+* {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.6rem;
+    padding: 0.6rem;
+    margin: 0.8rem;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+tr, th, td {
+    border: black solid 1px;
+    text-align: center;
+}
+
+button, input, select {
+    border: black solid 1px;
+    background-color: white;
+    color: black;
+    display: block;
+}
+
+button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    font-weight: bold;
+}
