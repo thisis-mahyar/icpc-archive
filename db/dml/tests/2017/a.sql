@@ -1,0 +1,16 @@
+INSERT
+INTO
+    icpc_archive.tests
+    (
+        problem_id,
+        number,
+        input_path,
+        output_path
+    )
+VALUES
+    (
+        1,
+        1,
+        '/2017/a/01/in',
+        '/2017/a/01/out'
+    );

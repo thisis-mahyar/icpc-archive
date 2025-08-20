@@ -1,0 +1,52 @@
+INSERT
+INTO
+    icpc_archive.tests
+    (
+        problem_id,
+        number,
+        input_path,
+        output_path
+    )
+VALUES
+    (
+        1,
+        1,
+        '/2024/b/01/in',
+        '/2024/b/01/out'
+    );
+
+
+INSERT
+INTO
+    icpc_archive.tests
+    (
+        problem_id,
+        number,
+        input_path,
+        output_path
+    )
+VALUES
+    (
+        1,
+        2,
+        '/2024/b/02/in',
+        '/2024/b/02/out'
+    );
+
+
+INSERT
+INTO
+    icpc_archive.tests
+    (
+        problem_id,
+        number,
+        input_path,
+        output_path
+    )
+VALUES
+    (
+        1,
+        3,
+        '/2024/b/03/in',
+        '/2024/b/03/out'
+    );
