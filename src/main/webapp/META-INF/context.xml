@@ -1,0 +1,14 @@
+<Context>
+    <Resource
+            name="jdbc/icpc_archive"
+            auth="Container"
+            type="javax.sql.DataSource"
+            maxTotal="20"
+            maxIdle="5"
+            maxWait="10000"
+            username="root"
+            password="1234"
+            driverClassName="com.mysql.cj.jdbc.Driver"
+            url="jdbc:mysql://localhost:3306/icpc_archive?useSSL=false&amp;serverTimezone=UTC"
+    />
+</Context>
