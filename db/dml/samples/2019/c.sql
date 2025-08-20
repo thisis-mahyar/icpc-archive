@@ -1,0 +1,27 @@
+INSERT
+INTO
+    icpc_archive.samples
+    (
+        problem_id,
+        number,
+        input,
+        output,
+        note
+    )
+VALUES
+    (
+        1,
+        1,
+        '
+        5
+        acmacm@icpc.ir
+        acmacm..a@icpc.ir
+        .a1a1.abc@icpc.ir
+        acma.c.m@icpc.ir
+        acmacm@icpc.com
+        ',
+        '
+        2
+        ',
+        NULL
+    );

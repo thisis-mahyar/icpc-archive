@@ -1,0 +1,46 @@
+INSERT
+INTO
+    icpc_archive.samples
+    (
+        problem_id,
+        number,
+        input,
+        output,
+        note
+    )
+VALUES
+    (
+        1,
+        1,
+        '
+        248
+        02
+        72
+        21
+        51
+        62
+        60
+        10
+        13
+        32
+        30
+        10
+        13
+        63
+        60
+        40
+        42
+        120
+        00
+        10 0
+        31
+        51
+        10
+        000
+        ',
+        '
+        No
+        Yes
+        ',
+        NULL
+    );

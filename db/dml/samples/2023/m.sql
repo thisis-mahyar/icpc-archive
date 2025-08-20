@@ -1,0 +1,58 @@
+INSERT
+INTO
+    icpc_archive.samples
+    (
+        problem_id,
+        number,
+        input,
+        output,
+        note
+    )
+VALUES
+    (
+        1,
+        1,
+        '
+        5
+        blue
+        red
+        blue
+        black
+        red
+        ',
+        '
+        3
+        ',
+        NULL
+    );
+
+INSERT
+INTO
+    icpc_archive.samples
+    (
+        problem_id,
+        number,
+        input,
+        output,
+        note
+    )
+VALUES
+    (
+        1,
+        2,
+        '
+        8
+        peachfuzz
+        livingcoral
+        livingcoral
+        teal
+        teal
+        livingcoral
+        livingcoral
+        coral
+        ',
+        '
+        5
+        ',
+        NULL
+    );

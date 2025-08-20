@@ -1,0 +1,133 @@
+INSERT
+INTO
+    icpc_archive.samples
+    (
+        problem_id,
+        number,
+        input,
+        output,
+        note
+    )
+VALUES
+    (
+        1,
+        1,
+        '
+        4 5
+        .*#..
+        .*..E
+        ..##.
+        S....
+        ',
+        '
+        2
+        ',
+        NULL
+    );
+
+INSERT
+INTO
+    icpc_archive.samples
+    (
+        problem_id,
+        number,
+        input,
+        output,
+        note
+    )
+VALUES
+    (
+        1,
+        2,
+        '
+        6 8
+        .......E
+        ........
+        ........
+        .....**.
+        ........
+        S.......
+        ',
+        '
+        3
+        ',
+        NULL
+    );
+
+INSERT
+INTO
+    icpc_archive.samples
+    (
+        problem_id,
+        number,
+        input,
+        output,
+        note
+    )
+VALUES
+    (
+        1,
+        3,
+        '
+        3 3
+        #E#
+        ###
+        #S#
+        ',
+        '
+        -1
+        ',
+        NULL
+    );
+
+INSERT
+INTO
+    icpc_archive.samples
+    (
+        problem_id,
+        number,
+        input,
+        output,
+        note
+    )
+VALUES
+    (
+        1,
+        4,
+        '
+        3 3
+        .S.
+        ***
+        .E.
+        ',
+        '
+        -1
+        ',
+        NULL
+    );
+
+INSERT
+INTO
+    icpc_archive.samples
+    (
+        problem_id,
+        number,
+        input,
+        output,
+        note
+    )
+VALUES
+    (
+        1,
+        5,
+        '
+        3 3
+        S..
+        ...
+        ..E
+        ',
+        '
+        safe
+        ',
+        NULL
+    );
