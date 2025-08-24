@@ -1,35 +1,57 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
-<html>
+<html lang = "en">
 <head>
+    <meta charset = "UTF-8">
+    <meta content = "width=device-width, initial-scale=1" name = "viewport">
     <title>Sign in</title>
+    <link href = "style.css" rel = "stylesheet">
 </head>
 <body>
+<nav>
+    <div class = "left">
+        <img alt = "Logo" src = "logo/logo.svg">
+        <a href = "contests">Contests</a>
+    </div>
 
-<a href="contests">Contests</a>
-<a href="problems">Problems</a>
+    <div class = "right">
+        <c:if test="${sessionScope.user == null}">
+            <a href="sign-in.jsp">Sign in</a>
+            <a href="sign-up.jsp">Sign up</a>
+        </c:if>
 
-<c:if test="${sessionScope.user == null}">
-    <a href="sign-in.jsp">SIGN IN</a>
-    <a href="sign-up.jsp">SIGN UP</a>
-</c:if>
+        <c:if test="${sessionScope.user != null}">
+            <a href="profile.jsp">Profile</a>
+            <a href="user?command=sign-out">Sign out</a>
+        </c:if>
+    </div>
+</nav>
 
-<c:if test="${sessionScope.user != null}">
-    <a href="profile.jsp">PROFILE</a>
-    <a href="user?command=sign-out">SIGN OUT</a>
-</c:if>
+<div class = "form-container">
 
+    <form action = "user" method = "post">
+        <h2>Sign in</h2>
+        <input name = "command" type = "hidden" value = "sign-in">
 
-<form action="user" method="post">
+        <div>
+            <label for = "user">Username</label>
+            <input id = "user" name = "username"
+                   placeholder = "thisis_mahyar"
+                   required
+                   type = "text">
+        </div>
 
-    <input type="hidden" name="command" value="sign-in">
+        <div>
+            <label for = "password">Password</label>
+            <input id = "password" name = "password" placeholder = "********"
+                   required type = "password">
+        </div>
 
-    <input name="username" type="text" id="username" placeholder="Username" required>
-    <input name="password" type="password" id="password" placeholder="Password" required>
+        <input id = "submit" type = "submit" value = "Sign in">
 
-    <input type="submit" value="Sign in">
+    </form>
 
-</form>
+</div>
 
 </body>
 </html>
