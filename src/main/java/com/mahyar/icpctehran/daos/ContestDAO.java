@@ -27,7 +27,6 @@ public class ContestDAO {
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 int year = resultSet.getInt("year");
-                String notes = resultSet.getString("notes");
 
                 Contest contest = new Contest(id, year);
 
@@ -53,11 +52,8 @@ public class ContestDAO {
             ) {
                 if (resultSet.next()) {
                     int year = resultSet.getInt("year");
-                    String notes = resultSet.getString("notes");
 
-                    Contest contest = new Contest(id, year);
-
-                    return contest;
+                    return new Contest(id, year);
                 }
             }
         }

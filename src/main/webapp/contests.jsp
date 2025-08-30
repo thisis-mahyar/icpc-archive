@@ -3,36 +3,42 @@
 <html>
 <head>
     <title>Contests</title>
-
+    <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
 
-<a href="contests">Contests</a>
-<a href="problems">Problems</a>
+<nav>
+    <div class = "left">
+        <img alt = "Logo" src = "logo/logo.svg">
+        <a href = "contests">Contests</a>
+    </div>
 
-<c:if test="${sessionScope.user == null}">
-    <a href="sign-in.jsp">SIGN IN</a>
-    <a href="sign-up.jsp">SIGN UP</a>
-</c:if>
+    <div class = "right">
+        <c:if test="${sessionScope.user == null}">
+            <a href="sign-in.jsp">Sign in</a>
+            <a href="sign-up.jsp">Sign up</a>
+        </c:if>
 
-<c:if test="${sessionScope.user != null}">
-    <a href="profile.jsp">PROFILE</a>
-    <a href="user?command=sign-out">SIGN OUT</a>
-</c:if>
-
+        <c:if test="${sessionScope.user != null}">
+            <a href="profile.jsp">Profile</a>
+            <a href="user?command=sign-out">Sign out</a>
+        </c:if>
+    </div>
+</nav>
 
 <h1>Contests</h1>
 
 <table>
 
-    <tr>
-        <th>Year</th>
-    </tr>
-
     <c:forEach items="${contests}" var="contest">
 
         <tr>
-            <td><a href="/icpc_archive_war_exploded/contest/${contest.id}">${contest.year}</a></td>
+            <td>
+                <img src = "icon/contest.svg" alt = "Contest">
+            </td>
+            <td>
+                <a href="/icpc_archive_war_exploded/contest/${contest.id}">${contest.year}</a>
+            </td>
         </tr>
 
     </c:forEach>
