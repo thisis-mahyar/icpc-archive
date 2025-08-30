@@ -98,3 +98,7 @@ form h2 {
     font-size: 24px;
     font-weight: normal;
 }
+
+.contest-logo {
+    background-color: grey;
+}
