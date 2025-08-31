@@ -17,7 +17,7 @@ public class ContestDAO {
 
     public List<Contest> findAll() throws SQLException {
         List<Contest> contests = new ArrayList<>();
-        String query = "SELECT * FROM contests";
+        String query = "SELECT * FROM contests ORDER BY year DESC";
 
         try (
                 Connection connection = dataSource.getConnection();
