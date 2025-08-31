@@ -1,0 +1,50 @@
+@import "main.css";
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10rem;
+}
+
+/* left, right */
+
+nav .left, .right {
+    display: flex;
+    align-items: center;
+}
+
+nav .left {
+    gap: 5rem;
+}
+
+nav .right {
+    gap: 1rem;
+}
+
+/* links */
+
+nav img {
+    height: 4rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: black;
+
+    border: black solid 0.1rem;
+    border-radius: 0.8rem;
+
+    padding: 0.8rem;
+}
+
+nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+nav #logo {
+    border: none;
+}

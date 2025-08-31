@@ -1,0 +1,10 @@
+@import "main.css";
+
+h1 {
+    max-width: 72rem;
+}
+
+p {
+    font-size: 2.4rem;
+    max-width: 72rem;
+}

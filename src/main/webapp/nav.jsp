@@ -2,18 +2,17 @@
 
 <html>
 <head>
-    <title>Profile</title>
-    <link href = "style.css" rel = "stylesheet">
+    <title>ICPC Tehran</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
 <nav>
-    <div class = "left">
-        <img alt = "Logo" src = "logo/logo.svg">
-        <a href = "contests">Contests</a>
+    <div class="left">
+        <a href="#" id="logo"><img alt="Logo" src="logo/logo.svg"></a>
+        <a href="contests">Contests</a>
     </div>
-
-    <div class = "right">
+    <div class="right">
         <c:if test="${sessionScope.user == null}">
             <a href="sign-in.jsp">Sign in</a>
             <a href="sign-up.jsp">Sign up</a>
@@ -25,11 +24,5 @@
         </c:if>
     </div>
 </nav>
-
-<h1>This is Profile</h1>
-
-${sessionScope.user.username}
-${sessionScope.user.email}
-
 </body>
 </html>

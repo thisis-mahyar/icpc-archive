@@ -45,7 +45,7 @@ public class ContestController extends HttpServlet {
             req.setAttribute("contest", contest);
             req.setAttribute("contest-problems", contestProblems);
 
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/contest.jsp"); // you have to put / before (just in this case! I don't know why!!!)
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("contest.jsp"); // you have to put / before (just in this case! I don't know why!!!)
 
             requestDispatcher.forward(req, resp);
 

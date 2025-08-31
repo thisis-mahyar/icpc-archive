@@ -11,12 +11,12 @@
 <a href="problems">Problems</a>
 
 <c:if test="${sessionScope.user == null}">
-    <a href="sign-in.jsp">SIGN IN</a>
-    <a href="sign-up.jsp">SIGN UP</a>
+    <a href="${pageContext.request.contextPath}/jsp/sign-in.jsp">SIGN IN</a>
+    <a href="${pageContext.request.contextPath}/jsp/sign-up.jsp">SIGN UP</a>
 </c:if>
 
 <c:if test="${sessionScope.user != null}">
-    <a href="profile.jsp">PROFILE</a>
+    <a href="${pageContext.request.contextPath}/jsp/profile.jsp">PROFILE</a>
     <a href="user?command=sign-out">SIGN OUT</a>
 </c:if>
 
