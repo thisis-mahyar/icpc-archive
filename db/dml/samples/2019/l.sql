@@ -10,7 +10,7 @@ INTO
     )
 VALUES
     (
-        1,
+        34,
         1,
         '
         INPUT $2
@@ -48,7 +48,7 @@ INTO
     )
 VALUES
     (
-        1,
+        34,
         2,
         '
         INPUT $0

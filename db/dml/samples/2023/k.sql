@@ -10,7 +10,7 @@ INTO
     )
 VALUES
     (
-        1,
+        69,
         1,
         '
         BUY (10 apple, 10 carrot, 10 banana, ())
@@ -49,7 +49,7 @@ INTO
     )
 VALUES
     (
-        1,
+        69,
         2,
         '
         BUY (apple, (banana, 3 carrot))
@@ -84,7 +84,7 @@ INTO
     )
 VALUES
     (
-        1,
+        69,
         3,
         '
         BUY ((duck 2, carrot), 1 celery)

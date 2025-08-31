@@ -10,7 +10,7 @@ INTO
     )
 VALUES
     (
-        1,
+        22,
         1,
         '
         class B(A):

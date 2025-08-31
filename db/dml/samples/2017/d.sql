@@ -10,7 +10,7 @@ INTO
     )
 VALUES
     (
-        1,
+        4,
         1,
         '
         Russia, Germany, Brazil, Portugal, Argentina, Belgium, Poland, France
