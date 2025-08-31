@@ -2,6 +2,7 @@ package com.mahyar.icpctehran.controllers;
 
 import com.mahyar.icpctehran.daos.ProblemDAO;
 import com.mahyar.icpctehran.models.Problem;
+import com.mahyar.icpctehran.models.Sample;
 import jakarta.annotation.Resource;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -13,6 +14,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet(urlPatterns = "/problem/*")
 public class ProblemController extends HttpServlet {
@@ -28,11 +31,8 @@ public class ProblemController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String url = req.getRequestURL().toString();
-
-        String[] arr = url.split("/");
-
-        int id = Integer.parseInt(arr[arr.length - 1]);
+        String[] url = req.getRequestURL().toString().split("/");
+        int id = Integer.parseInt(url[url.length - 1]);
 
         try {
             Problem problem = problemDAO.findById(id);

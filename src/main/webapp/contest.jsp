@@ -4,6 +4,7 @@
 <head>
     <title>Contest</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/contest.css">
 </head>
 <body>
 <jsp:include page="/nav.jsp" />
@@ -11,7 +12,7 @@
 <table>
     <c:forEach items = "${contest_problems}" var = "problem">
         <tr>
-            <td class = "label">${problem.label}</td>
+            <td class = "label"><span>${problem.label}</span></td>
             <td class = "title"><a href = "/problem/${problem.id}">${problem.title}</a></td>
         </tr>
     </c:forEach>

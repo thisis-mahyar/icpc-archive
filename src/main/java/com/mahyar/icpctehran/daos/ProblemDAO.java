@@ -65,14 +65,13 @@ public class ProblemDAO {
                 if (resultSet.next()) {
                     char label = resultSet.getString("label").charAt(0);
                     String title = resultSet.getString("title");
+                    int timeLimit = Integer.parseInt(resultSet.getString("time_limit"));
+                    int memoryLimit = Integer.parseInt(resultSet.getString("memory_limit"));
                     String description = resultSet.getString("description");
                     String input = resultSet.getString("input");
                     String output = resultSet.getString("output");
-                    int contestId = resultSet.getInt("contest_id");
 
-//                    Problem problem = new Problem(id, label, title, description, input, output, contestId);
-//
-//                    return problem;
+                    return new Problem(id, label, title, timeLimit, memoryLimit, description, input, output, null);
                 }
             }
         }

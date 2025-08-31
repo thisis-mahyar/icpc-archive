@@ -1,5 +1,10 @@
-* {
+*:not(mjx-container):not(mjx-container *):not(code) {
     font-family: Helvetica, serif;
+}
+
+mjx-container, mjx-container * {
+    font-weight: 300;
+    font-size: 1.6rem;
 }
 
 html {
@@ -16,6 +21,13 @@ h1 {
 }
 
 h2 {
-    font-size: 2.4rem;
+    font-size: 3.2rem;
     font-weight: normal;
+}
+
+code {
+    font-family: monospace;
+    background-color: #eeeeee;
+    border-radius: 0.4rem;
+    padding: 0.2rem;
 }
