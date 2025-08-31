@@ -22,7 +22,7 @@
                 <a href = "/contest/${contest.id}">
                         ${contest.year} ICPC Asia Tehran Regional Contest
                 </a>
-                <span>X Problems</span>
+                <span>${contest.questionNo} Problems</span>
             </td>
         </tr>
     </c:forEach>

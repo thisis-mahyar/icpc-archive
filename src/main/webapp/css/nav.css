@@ -29,7 +29,7 @@ nav img {
     height: 4rem;
 }
 
-nav a {
+nav a:not(#logo) {
     text-decoration: none;
     font-size: 1.6rem;
     color: black;
@@ -40,11 +40,7 @@ nav a {
     padding: 0.8rem;
 }
 
-nav a:hover {
+nav a:not(#logo):hover {
     background-color: black;
     color: white;
-}
-
-nav #logo {
-    border: none;
 }

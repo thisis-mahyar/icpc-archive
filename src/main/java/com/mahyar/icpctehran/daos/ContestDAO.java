@@ -1,7 +1,6 @@
 package com.mahyar.icpctehran.daos;
 
 import com.mahyar.icpctehran.models.Contest;
-import com.mahyar.icpctehran.models.Problem;
 
 import javax.sql.DataSource;
 import java.sql.*;
@@ -27,8 +26,9 @@ public class ContestDAO {
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 int year = resultSet.getInt("year");
+                int questionNo = resultSet.getInt("question_no");
 
-                Contest contest = new Contest(id, year);
+                Contest contest = new Contest(id, year, questionNo);
 
                 contests.add(contest);
             }
@@ -52,49 +52,13 @@ public class ContestDAO {
             ) {
                 if (resultSet.next()) {
                     int year = resultSet.getInt("year");
+                    int questionNo = resultSet.getInt("question_no");
 
-                    return new Contest(id, year);
+                    return new Contest(id, year, questionNo);
                 }
             }
         }
 
         return null;
-    }
-
-    public List<Problem> findAllProblemsByContestId(int id) throws SQLException {
-        List<Problem> problems = new ArrayList<>();
-        String query = "SELECT * FROM problems WHERE contest_id = ?";
-
-        try (
-                Connection connection = dataSource.getConnection();
-                PreparedStatement preparedStatement = connection.prepareStatement(query)
-        ) {
-
-            preparedStatement.setInt(1, id);
-
-            System.out.println(preparedStatement);
-
-            try (
-                    ResultSet resultSet = preparedStatement.executeQuery(query);
-            ) {
-
-                while (resultSet.next()) {
-                    int problemId = resultSet.getInt("id");
-                    char label = resultSet.getString("label").charAt(0);
-                    String title = resultSet.getString("title");
-                    String description = resultSet.getString("description");
-                    String input = resultSet.getString("input");
-                    String output = resultSet.getString("output");
-
-                    Problem problem = new Problem(problemId, label, title, 1000, 256, description, input, output, new Contest(1, 1));
-
-                    System.out.println(problem);
-
-                    problems.add(problem);
-                }
-            }
-        }
-
-        return problems;
     }
 }

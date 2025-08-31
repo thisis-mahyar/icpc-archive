@@ -34,12 +34,8 @@ public class ProblemController extends HttpServlet {
 
         int id = Integer.parseInt(arr[arr.length - 1]);
 
-        System.out.println("ID: " + id);
-
         try {
             Problem problem = problemDAO.findById(id);
-
-            System.out.println("Title: " + problem.getTitle());
 
             req.setAttribute("problem", problem);
 
