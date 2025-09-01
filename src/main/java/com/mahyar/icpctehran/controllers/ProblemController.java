@@ -1,6 +1,7 @@
 package com.mahyar.icpctehran.controllers;
 
 import com.mahyar.icpctehran.daos.ProblemDAO;
+import com.mahyar.icpctehran.daos.SampleDAO;
 import com.mahyar.icpctehran.models.Problem;
 import com.mahyar.icpctehran.models.Sample;
 import jakarta.annotation.Resource;
@@ -23,10 +24,12 @@ public class ProblemController extends HttpServlet {
     private DataSource dataSource;
 
     ProblemDAO problemDAO;
+    SampleDAO sampleDAO;
 
     @Override
     public void init() throws ServletException {
         problemDAO = new ProblemDAO(dataSource);
+        sampleDAO = new SampleDAO(dataSource);
     }
 
     @Override
@@ -36,8 +39,10 @@ public class ProblemController extends HttpServlet {
 
         try {
             Problem problem = problemDAO.findById(id);
+            List<Sample> samples = sampleDAO.findByProblem(problem);
 
             req.setAttribute("problem", problem);
+            req.setAttribute("samples", samples);
 
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("/problem.jsp"); // you have to put / before (just in this case! I don't know why!!!)
 

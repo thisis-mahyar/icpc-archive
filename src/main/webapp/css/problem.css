@@ -21,14 +21,20 @@ textarea {
     display: block;
     font-family: monospace;
     resize: none;
+    border-radius: 1.2rem;
+    padding: 1.2rem;
 }
 
 #submit {
-    background-color: #66BBFF;
-    color: white;
-    width: 12rem;
+    padding: 0.8rem 1.2rem;
     border-radius: 0.8rem;
     border: 0.1rem black solid;
+    margin-top: 1.2rem;
+}
+
+#submit:hover {
+    background-color: black;
+    color: white;
 }
 
 p, li {
@@ -41,3 +47,19 @@ h3 {
     font-weight: normal;
 }
 
+tr, td, th {
+    width: 48rem;
+    text-align: left;
+    padding: 1.2rem 0.8rem;
+}
+
+td code {
+    background-color: white;
+}
+
+th {
+    background-color: #eeeeee;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+}
