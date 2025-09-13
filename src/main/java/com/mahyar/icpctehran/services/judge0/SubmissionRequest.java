@@ -62,4 +62,14 @@ public class SubmissionRequest {
     public void setExpectedOutput(String expectedOutput) {
         this.expectedOutput = expectedOutput;
     }
+
+    @Override
+    public String toString() {
+        return "SubmissionRequest{" +
+                "sourceCode='" + sourceCode + '\'' +
+                ", languageId=" + languageId +
+                ", stdIn='" + stdIn + '\'' +
+                ", expectedOutput='" + expectedOutput + '\'' +
+                '}';
+    }
 }

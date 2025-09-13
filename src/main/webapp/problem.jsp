@@ -41,7 +41,7 @@
             </c:if>
         </c:forEach>
 
-        <form action = "${pageContext.request.contextPath}/judge" method = "get">
+        <form action = "${pageContext.request.contextPath}/judge" method = "post">
             <h3>Source Code</h3>
             <select name = "language">
                 <option value = "105">C++ (GCC 14.1.0)</option>

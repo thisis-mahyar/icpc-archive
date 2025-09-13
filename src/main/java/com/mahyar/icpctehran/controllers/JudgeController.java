@@ -2,6 +2,7 @@ package com.mahyar.icpctehran.controllers;
 
 import com.mahyar.icpctehran.services.judge0.JudgeService;
 import com.mahyar.icpctehran.services.judge0.SubmissionRequest;
+import com.mahyar.icpctehran.services.judge0.SubmissionResponse;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -20,7 +21,7 @@ public class JudgeController extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String sourceCode = req.getParameter("source_code");
         String stdIn = req.getParameter("input");
         int languageId = Integer.parseInt(req.getParameter("language"));
@@ -28,11 +29,11 @@ public class JudgeController extends HttpServlet {
         SubmissionRequest submissionRequest = new SubmissionRequest(sourceCode, languageId, stdIn);
 
         try {
-            String output = judgeService.submitCode(sourceCode, languageId, stdIn);
+            SubmissionResponse submissionResponse = judgeService.submitCode(submissionRequest);
 
             resp.setContentType("text/html");
 
-            resp.getWriter().print("<html><body>" + output + "</body></html>");
+            resp.getWriter().print("<html><body>" + submissionResponse.getStatus() + "</body></html>");
 
         } catch (Exception e) {
             throw new RuntimeException(e);
