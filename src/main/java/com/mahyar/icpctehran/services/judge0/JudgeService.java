@@ -1,4 +1,4 @@
-package com.mahyar.icpctehran.services;
+package com.mahyar.icpctehran.services.judge0;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -15,9 +15,8 @@ public class JudgeService {
     private final HttpClient client = HttpClient.newHttpClient();
     private final ObjectMapper mapper = new ObjectMapper();
 
-    public String submitCode(String sourceCode, int languageId, String stdin) throws Exception {
-        Request requestPayload = new Request(sourceCode, languageId, stdin);
-        String jsonBody = mapper.writeValueAsString(requestPayload);
+    public String submitCode(SubmissionRequest submissionRequest) throws Exception {
+        String jsonBody = mapper.writeValueAsString(submissionRequest);
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(API_URL))

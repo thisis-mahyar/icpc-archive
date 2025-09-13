@@ -1,6 +1,7 @@
 package com.mahyar.icpctehran.controllers;
 
-import com.mahyar.icpctehran.services.JudgeService;
+import com.mahyar.icpctehran.services.judge0.JudgeService;
+import com.mahyar.icpctehran.services.judge0.SubmissionRequest;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -21,11 +22,13 @@ public class JudgeController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String sourceCode = req.getParameter("source_code");
-        String input = req.getParameter("input");
-        int langId = Integer.parseInt(req.getParameter("language"));
+        String stdIn = req.getParameter("input");
+        int languageId = Integer.parseInt(req.getParameter("language"));
+
+        SubmissionRequest submissionRequest = new SubmissionRequest(sourceCode, languageId, stdIn);
 
         try {
-            String output = judgeService.submitCode(sourceCode, langId, input);
+            String output = judgeService.submitCode(sourceCode, languageId, stdIn);
 
             resp.setContentType("text/html");
 
