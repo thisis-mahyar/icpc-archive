@@ -22,8 +22,7 @@ public class JudgeController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String sourceCode = req.getParameter("source_code");
         String input = req.getParameter("input");
-
-        int langId = 54;
+        int langId = Integer.parseInt(req.getParameter("language"));
 
         try {
             String output = judgeService.submitCode(sourceCode, langId, input);

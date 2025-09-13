@@ -23,19 +23,33 @@
         <c:forEach items = "${samples}" var = "sample">
             <h3>Sample ${sample.number}</h3>
             <table>
-                <tr><th>Input</th></tr>
-                <tr><td><code>${sample.input}</code></td></tr>
-                <tr><th>Output</th></tr>
-                <tr><td><code>${sample.output}</code></td></tr>
+                <tr>
+                    <th>Input</th>
+                </tr>
+                <tr>
+                    <td><code>${sample.input}</code></td>
+                </tr>
+                <tr>
+                    <th>Output</th>
+                </tr>
+                <tr>
+                    <td><code>${sample.output}</code></td>
+                </tr>
             </table>
-            <c:if test="${sample.note != null}">
+            <c:if test = "${sample.note != null}">
                 <p>${sample.note}</p>
             </c:if>
         </c:forEach>
 
         <form action = "${pageContext.request.contextPath}/judge" method = "get">
             <h3>Source Code</h3>
-            <textarea name = "source_code" cols = "50" rows = "20" placeholder="// CODE"></textarea>
+            <select name = "language">
+                <option value = "105">C++ (GCC 14.1.0)</option>
+                <option value = "103">C (GCC 14.1.0)</option>
+                <option value = "91">Java (JDK 17.0.6)</option>
+                <option value = "100">Python (3.12.5)</option>
+            </select>
+            <textarea name = "source_code" cols = "50" rows = "20" placeholder = "// CODE"></textarea>
             <input id = "submit" type = "submit" value = "Submit">
         </form>
     </div>
@@ -48,7 +62,7 @@
         }
     };
 </script>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script defer src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </body>
 </html>

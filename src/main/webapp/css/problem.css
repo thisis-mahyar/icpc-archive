@@ -17,9 +17,38 @@ main {
     gap: 3.2rem;
 }
 
+select {
+    /* remove arrow icon */
+    -webkit-appearance: none; /* Safari/Chrome */
+    -moz-appearance: none; /* Firefox */
+    appearance: none;
+
+    border: 1px solid black;
+    background-color: #66BBFF;
+    color: white;
+    padding: 4px 8px;
+    margin-bottom: 12px;
+    border-radius: 0.4rem;
+    font-family: Helvetica, serif;
+    font-size: 1.4rem;
+    justify-self: right;
+}
+
+option {
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+option:hover {
+    background-color: #66BBFF;
+    color: white;
+}
+
 textarea {
     display: block;
-    font-family: monospace;
+    font-size: 1.2rem;
+    font-family: "JetBrains Mono", serif !important;
     resize: none;
     border-radius: 1.2rem;
     padding: 1.2rem;

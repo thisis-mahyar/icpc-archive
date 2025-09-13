@@ -8,7 +8,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class JudgeService {
-    private static final String API_URL = "https://judge0-ce.p.rapidapi.com/submissions?base64_encoded=false&wait=true";
+    private static final String API_URL = "https://ce.judge0.com/submissions?wait=true";
     private static final String API_KEY = "6f2069ae81msh17fff61c613b778p1d7a51jsn2e9975c73d26";
     private static final String API_HOST = "judge0-ce.p.rapidapi.com";
 
@@ -16,18 +16,20 @@ public class JudgeService {
     private final ObjectMapper mapper = new ObjectMapper();
 
     public String submitCode(String sourceCode, int languageId, String stdin) throws Exception {
-        JudgeRequest requestPayload = new JudgeRequest(sourceCode, languageId, stdin);
+        Request requestPayload = new Request(sourceCode, languageId, stdin);
         String jsonBody = mapper.writeValueAsString(requestPayload);
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(API_URL))
-                .header("Content-Type", "application/json")
                 .header("X-RapidAPI-Key", API_KEY)
                 .header("X-RapidAPI-Host", API_HOST)
+                .header("Content-Type", "application/json")
                 .POST(HttpRequest.BodyPublishers.ofString(jsonBody))
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        mapper.readValue(response.body(), Submission.class);
 
         return response.body(); // Contains output, errors, verdict, etc.
     }
