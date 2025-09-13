@@ -4,5 +4,5 @@ CREATE TABLE IF NOT EXISTS contests
 (
     id   INT AUTO_INCREMENT PRIMARY KEY,
     year INT NOT NULL UNIQUE,
-    questions INT NOT NULL
+    problem_no INT NOT NULL
 );

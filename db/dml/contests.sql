@@ -1,6 +1,6 @@
 USE icpc_archive;
 
-INSERT INTO contests (year, question_no)
+INSERT INTO contests (year, problem_no)
 VALUES
     (1999, 8),
     (2000, 9),
