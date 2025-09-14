@@ -81,4 +81,54 @@ public class ProblemDAO {
 
         return null;
     }
+
+    public void save(Problem problem) throws SQLException {
+        String query = "INSERT INTO problems (label, title, description, input, output, contest_id) VALUES (?, ?, ?, ?, ?, ?)";
+
+        try (
+                Connection connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+        ) {
+            preparedStatement.setString(1, problem.getLabel().toString());
+            preparedStatement.setString(2, problem.getTitle());
+            preparedStatement.setString(3, problem.getDescription());
+            preparedStatement.setString(4, problem.getInput());
+            preparedStatement.setString(5, problem.getOutput());
+            preparedStatement.setInt(6, problem.getContest().getId());
+
+            preparedStatement.executeUpdate();
+        }
+    }
+
+    public void update(Problem problem) throws SQLException {
+        String query = "UPDATE problems SET label = ?, title = ?, description = ?, input = ?, output = ?, contest_id = ? WHERE id = ?";
+
+        try (
+                Connection connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+        ) {
+            preparedStatement.setString(1, problem.getLabel().toString());
+            preparedStatement.setString(2, problem.getTitle());
+            preparedStatement.setString(3, problem.getDescription());
+            preparedStatement.setString(4, problem.getInput());
+            preparedStatement.setString(5, problem.getOutput());
+            preparedStatement.setInt(6, problem.getContest().getId());
+            preparedStatement.setInt(7, problem.getId());
+
+            preparedStatement.executeUpdate();
+        }
+    }
+
+    public void delete(int id) throws SQLException {
+        String query = "DELETE FROM problems WHERE id = ?";
+
+        try (
+                Connection connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+        ) {
+            preparedStatement.setInt(1, id);
+
+            preparedStatement.executeUpdate();
+        }
+    }
 }

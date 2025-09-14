@@ -75,7 +75,7 @@ public class UserController extends HttpServlet {
 
         User user = new User(username, email, password);
 
-        if (validate(user) && password.equals(confirmPassword)) {
+        if (/*validate(user) && */password.equals(confirmPassword)) {
             try {
                 userDAO.save(user);
 

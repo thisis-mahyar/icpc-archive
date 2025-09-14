@@ -14,11 +14,10 @@ import jakarta.servlet.http.HttpSession;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet("/admin")
-public class AdminController extends HttpServlet {
+@WebServlet("/user-management")
+public class UserManagementController extends HttpServlet {
     @Resource(name = "jdbc/icpc_archive")
     private DataSource dataSource;
 
@@ -35,17 +34,11 @@ public class AdminController extends HttpServlet {
         User sessionUser = (User) session.getAttribute("user");
 
         if ("admin".equals(sessionUser.getUsername())) {
-            System.out.println("hey admin");
             try {
                 if ("delete".equals(req.getParameter("command"))) {
                     int id = Integer.parseInt(req.getParameter("id"));
                     userDAO.delete(id);
-                }
-                else if ("update".equals(req.getParameter("command"))) {
-                    System.out.println("UPDATE");
-
-                    System.out.println(req.getParameter("id"));
-
+                } else if ("update".equals(req.getParameter("command"))) {
                     int id = Integer.parseInt(req.getParameter("id"));
                     String username = req.getParameter("username");
                     String email = req.getParameter("email");
@@ -60,7 +53,7 @@ public class AdminController extends HttpServlet {
 
                 req.setAttribute("users", users);
 
-                RequestDispatcher requestDispatcher = req.getRequestDispatcher("/admin.jsp");
+                RequestDispatcher requestDispatcher = req.getRequestDispatcher("/user-management.jsp");
 
                 requestDispatcher.forward(req, resp);
             } catch (SQLException e) {
@@ -73,18 +66,15 @@ public class AdminController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String username = req.getParameter("username");
-        String email = req.getParameter("email");
-        String password = req.getParameter("password");
-
-        User user = new User(username, email, password);
-
-        req.setAttribute("user", user);
-
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/admin.jsp");
-
-        requestDispatcher.forward(req, resp);
         try {
+            String username = req.getParameter("username");
+            String email = req.getParameter("email");
+            String password = req.getParameter("password");
+
+            User user = new User(username, email, password);
+
+            resp.sendRedirect("/user-management");
+
             userDAO.save(user);
         } catch (SQLException e) {
             throw new RuntimeException(e);

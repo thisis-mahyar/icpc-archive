@@ -1,6 +1,7 @@
 package com.mahyar.icpctehran.daos;
 
 import com.mahyar.icpctehran.models.Contest;
+import com.mahyar.icpctehran.models.User;
 
 import javax.sql.DataSource;
 import java.sql.*;
@@ -60,5 +61,47 @@ public class ContestDAO {
         }
 
         return null;
+    }
+
+    public void save(Contest contest) throws SQLException {
+        String query = "INSERT INTO contests (year, problem_no) VALUES (?, ?)";
+
+        try (
+                Connection connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+        ) {
+            preparedStatement.setInt(1, contest.getYear());
+            preparedStatement.setInt(2, contest.getQuestionNo());
+
+            preparedStatement.executeUpdate();
+        }
+    }
+
+    public void update(Contest contest) throws SQLException {
+        String query = "UPDATE contests SET year = ?, problem_no = ? WHERE id = ?";
+
+        try (
+                Connection connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+        ) {
+            preparedStatement.setInt(1, contest.getYear());
+            preparedStatement.setInt(2, contest.getQuestionNo());
+            preparedStatement.setInt(3, contest.getId());
+
+            preparedStatement.executeUpdate();
+        }
+    }
+
+    public void delete(int id) throws SQLException {
+        String query = "DELETE FROM contests WHERE id = ?";
+
+        try (
+                Connection connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+        ) {
+            preparedStatement.setInt(1, id);
+
+            preparedStatement.executeUpdate();
+        }
     }
 }

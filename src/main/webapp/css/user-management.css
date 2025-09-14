@@ -1,0 +1,35 @@
+table, tr, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    width: 20rem;
+    height: 3rem;
+    font-size: 1.6rem;
+    color: black;
+    border-radius: 0.8rem;
+    border: 0.1rem black solid;
+    background-color: white;
+    padding: 0.4rem 0.8rem;
+}
+
+#submit {
+    background-color: #66BBFF;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

@@ -5,6 +5,11 @@ public class Contest {
     private Integer year;
     private Integer questionNo;
 
+    public Contest(Integer year, Integer questionNo) {
+        this.year = year;
+        this.questionNo = questionNo;
+    }
+
     public Contest(Integer id, Integer year, Integer questionNo) {
         this.id = id;
         this.year = year;

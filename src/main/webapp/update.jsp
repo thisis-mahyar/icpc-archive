@@ -2,21 +2,22 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>Update User</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/user-management.css">
 </head>
 <body>
+
 <jsp:include page="/nav.jsp"/>
 
-<form action="admin" method="get">
+<form action="user-management" method="get"> <!-- get is not recommended -->
     <h2>Update</h2>
     <input type="hidden" name="command" value="update">
     <input type="hidden" name="id" value="${user.id}">
     <input type="text" name="username" placeholder="Username">
     <input type="text" name="email" placeholder="Email">
     <input type="text" name="password" placeholder="Password">
-    <input type="submit" value="Add">
+    <input type="submit" value="Add" id="submit">
 </form>
 
 </body>

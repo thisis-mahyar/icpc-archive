@@ -12,7 +12,8 @@
         <a href="${pageContext.request.contextPath}/" id="logo"><img alt="Logo" src="${pageContext.request.contextPath}/logo/logo.svg"></a>
         <a href="${pageContext.request.contextPath}/contests">Contests</a>
         <c:if test="${sessionScope.user.username == 'admin'}">
-            <a href="${pageContext.request.contextPath}/admin">Admin</a>
+            <a href="${pageContext.request.contextPath}/user-management">Users</a>
+            <a href="${pageContext.request.contextPath}/submissions">Submissions</a>
         </c:if>
     </div>
     <div class="right">

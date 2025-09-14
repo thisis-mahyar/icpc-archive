@@ -22,3 +22,37 @@ td {
     text-decoration: none;
     color: black;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    width: 20rem;
+    height: 3rem;
+    font-size: 1.6rem;
+    color: black;
+    border-radius: 0.8rem;
+    border: 0.1rem black solid;
+    background-color: white;
+    padding: 0.4rem 0.8rem;
+}
+
+#submit {
+    background-color: #66BBFF;
+    color: white;
+}
+
+.admin-content {
+    padding: 1.2rem;
+    display: flex;
+    gap: 16px;
+}
+
+.admin-content a {
+    text-decoration: none;
+    color: #66BBFF;
+    height: fit-content;
+}

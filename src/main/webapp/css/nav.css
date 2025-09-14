@@ -16,7 +16,7 @@ nav .left, .right {
 }
 
 nav .left {
-    gap: 5rem;
+    gap: 1rem;
 }
 
 nav .right {
@@ -27,6 +27,10 @@ nav .right {
 
 nav img {
     height: 4rem;
+}
+
+#logo {
+    margin-right: 3rem;
 }
 
 nav a:not(#logo) {

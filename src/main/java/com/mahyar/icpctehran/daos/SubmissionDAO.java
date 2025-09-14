@@ -16,10 +16,12 @@ public class SubmissionDAO {
 
     public SubmissionDAO(DataSource dataSource) {
         this.dataSource = dataSource;
+        this.userDAO = new UserDAO(dataSource);
+        this.problemDAO = new ProblemDAO(dataSource);
     }
 
     public List<Submission> findAll() throws SQLException {
-        List<Submission> submissions = new ArrayList<Submission>();
+        List<Submission> submissions = new ArrayList<>();
         String query = "SELECT * FROM submissions";
 
         try (
@@ -32,6 +34,7 @@ public class SubmissionDAO {
                 String token = resultSet.getString("token");
                 String language = resultSet.getString("language");
                 String submissionTime = resultSet.getString("submission_time");
+
                 User user = userDAO.findById(resultSet.getInt("user_id"));
                 Problem problem = problemDAO.findById(resultSet.getInt("problem_id"));
 
@@ -55,6 +58,19 @@ public class SubmissionDAO {
             preparedStatement.setString(2, submission.getLanguage());
             preparedStatement.setInt(3, submission.getUser().getId());
             preparedStatement.setInt(4, submission.getProblem().getId());
+
+            preparedStatement.executeUpdate();
+        }
+    }
+
+    public void delete(int id) throws SQLException {
+        String query = "DELETE FROM submissions WHERE id = ?";
+
+        try (
+                Connection connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+        ) {
+            preparedStatement.setInt(1, id);
 
             preparedStatement.executeUpdate();
         }

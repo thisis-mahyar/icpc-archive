@@ -4,7 +4,7 @@
 <head>
     <title>Title</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/user-management.css">
 </head>
 <body>
 <jsp:include page="/nav.jsp"/>
@@ -20,17 +20,17 @@
             <td>${user.username}</td>
             <td>${user.email}</td>
             <td><a href="${pageContext.request.contextPath}/update.jsp?id=${user.id}">Update</a></td>
-            <td><a href="${pageContext.request.contextPath}/admin?command=delete&id=${user.id}">Delete</a></td>
+            <td><a href="${pageContext.request.contextPath}/user-management?command=delete&id=${user.id}">Delete</a></td>
         </tr>
     </c:forEach>
 </table>
 
-<form action="admin" method="post">
+<form action="user-management" method="post">
     <h2>Add a user</h2>
     <input type="text" name="username" placeholder="Username">
     <input type="text" name="email" placeholder="Email">
     <input type="text" name="password" placeholder="Password">
-    <input type="submit" value="Add">
+    <input type="submit" value="Add" id="submit">
 </form>
 
 </body>
