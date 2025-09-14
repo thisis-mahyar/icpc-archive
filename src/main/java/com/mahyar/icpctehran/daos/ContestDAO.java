@@ -26,7 +26,7 @@ public class ContestDAO {
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 int year = resultSet.getInt("year");
-                int questionNo = resultSet.getInt("question_no");
+                int questionNo = resultSet.getInt("problem_no");
 
                 Contest contest = new Contest(id, year, questionNo);
 
@@ -52,7 +52,7 @@ public class ContestDAO {
             ) {
                 if (resultSet.next()) {
                     int year = resultSet.getInt("year");
-                    int questionNo = resultSet.getInt("question_no");
+                    int questionNo = resultSet.getInt("problem_no");
 
                     return new Contest(id, year, questionNo);
                 }

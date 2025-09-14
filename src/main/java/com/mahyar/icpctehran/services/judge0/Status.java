@@ -1,8 +1,20 @@
 package com.mahyar.icpctehran.services.judge0;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Status {
+    @JsonProperty("id")
     private int id;
+
+    @JsonProperty("description")
     private String description;
+
+    public Status() {}
+
+    public Status(int id, String description) {
+        this.id = id;
+        this.description = description;
+    }
 
     public int getId() {
         return id;

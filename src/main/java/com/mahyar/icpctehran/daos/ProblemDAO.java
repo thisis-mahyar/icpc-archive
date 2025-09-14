@@ -10,9 +10,11 @@ import java.util.List;
 
 public class ProblemDAO {
     DataSource dataSource;
+    ContestDAO contestDAO;
 
     public ProblemDAO(DataSource dataSource) {
         this.dataSource = dataSource;
+        this.contestDAO = new ContestDAO(dataSource);
     }
 
     public List<Problem> findByContest(Contest contest) throws SQLException {
@@ -70,8 +72,9 @@ public class ProblemDAO {
                     String description = resultSet.getString("description");
                     String input = resultSet.getString("input");
                     String output = resultSet.getString("output");
+                    Contest contest = contestDAO.findById(resultSet.getInt("contest_id"));
 
-                    return new Problem(id, label, title, timeLimit, memoryLimit, description, input, output, null);
+                    return new Problem(id, label, title, timeLimit, memoryLimit, description, input, output, contest);
                 }
             }
         }

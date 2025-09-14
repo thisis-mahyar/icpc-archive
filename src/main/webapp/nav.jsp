@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<html>
+<html lang="en">
 <head>
     <title>ICPC Tehran</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
@@ -11,6 +11,9 @@
     <div class="left">
         <a href="${pageContext.request.contextPath}/" id="logo"><img alt="Logo" src="${pageContext.request.contextPath}/logo/logo.svg"></a>
         <a href="${pageContext.request.contextPath}/contests">Contests</a>
+        <c:if test="${sessionScope.user.username == 'admin'}">
+            <a href="${pageContext.request.contextPath}/admin">Admin</a>
+        </c:if>
     </div>
     <div class="right">
         <c:if test="${sessionScope.user == null}">

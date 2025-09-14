@@ -15,8 +15,8 @@ public class UserDAO {
     }
 
     public List<User> findAll() throws SQLException {
-        List<User> users = new ArrayList<User>();
-        String query = "SELECT * FROM users";
+        List<User> users = new ArrayList<>();
+        String query = "SELECT * FROM users WHERE username != 'admin'";
 
         try (
                 Connection connection = dataSource.getConnection();
@@ -27,14 +27,40 @@ public class UserDAO {
                 int id = resultSet.getInt("id");
                 String username = resultSet.getString("username");
                 String email = resultSet.getString("email");
-                String passwordHash = resultSet.getString("password_hash");
+                String password = resultSet.getString("password");
 
-                User user = new User(id, username, email, passwordHash);
+                User user = new User(id, username, email, password);
                 users.add(user);
             }
         }
 
         return users;
+    }
+
+    public User findById(int id) throws SQLException {
+        String query = "SELECT * FROM users WHERE id = ?";
+
+        try (
+                Connection connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(query)
+        ) {
+
+            preparedStatement.setInt(1, id);
+
+            try (
+                    ResultSet resultSet = preparedStatement.executeQuery()
+            ) {
+                if (resultSet.next()) {
+                    String username = resultSet.getString("username");
+                    String email = resultSet.getString("email");
+                    String password = resultSet.getString("password");
+
+                    return new User(id, username, email, password);
+                }
+            }
+        }
+
+        return null;
     }
 
     public User findByUsername(String username) throws SQLException {
@@ -53,7 +79,7 @@ public class UserDAO {
                 if (resultSet.next()) {
                     int id = resultSet.getInt("id");
                     String email = resultSet.getString("email");
-                    String passwordHash = resultSet.getString("password_hash");
+                    String passwordHash = resultSet.getString("password");
 
                     User user = new User(id, username, email, passwordHash);
 
@@ -75,6 +101,35 @@ public class UserDAO {
             preparedStatement.setString(1, user.getUsername());
             preparedStatement.setString(2, user.getEmail());
             preparedStatement.setString(3, user.getPassword());
+
+            preparedStatement.executeUpdate();
+        }
+    }
+
+    public void update(User user) throws SQLException {
+        String query = "UPDATE users SET username = ?, email = ?, password = ? WHERE id = ?";
+
+        try (
+                Connection connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+        ) {
+            preparedStatement.setString(1, user.getUsername());
+            preparedStatement.setString(2, user.getEmail());
+            preparedStatement.setString(3, user.getPassword());
+            preparedStatement.setInt(4, user.getId());
+
+            preparedStatement.executeUpdate();
+        }
+    }
+
+    public void delete(int id) throws SQLException {
+        String query = "DELETE FROM users WHERE id = ?";
+
+        try (
+                Connection connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+        ) {
+            preparedStatement.setInt(1, id);
 
             preparedStatement.executeUpdate();
         }

@@ -1,0 +1,61 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3.6rem;
+}
+
+.submission {
+    width: 64rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    margin-left: 7.4rem;
+}
+
+span {
+    background-color: #eeeeee;
+    border-radius: 24px;
+    padding: 4px 6px;
+    color: black;
+    border: black 1px solid;
+}
+
+svg {
+    border-radius: 50%;
+    padding: 1.6rem;
+    margin: 1.8rem 1.8rem 1.8rem 0;
+    border: 1px solid black;
+}
+
+.wrong-answer-svg {
+    background-color: indianred;
+}
+
+.accepted-svg {
+    background-color: #D0F0C0;
+}
+
+.source-code {
+    width: 36rem;
+    font-family: "JetBrains Mono", serif;
+    border-radius: 0.8rem;
+    padding: 1.2rem 0.4rem;
+    border: 1px black solid;
+    margin-left: 7.4rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}

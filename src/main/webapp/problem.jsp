@@ -42,8 +42,11 @@
         </c:forEach>
 
         <form action = "${pageContext.request.contextPath}/judge" method = "post">
+            <input type="hidden" name="problem_id" value="${problem.id}">
+            <input type="hidden" name="problem_title" value="${problem.title}">
+            <input type="hidden" name="contest_year" value="${problem.contest.year}">
             <h3>Source Code</h3>
-            <select name = "language">
+            <select name = "language_id">
                 <option value = "105">C++ (GCC 14.1.0)</option>
                 <option value = "103">C (GCC 14.1.0)</option>
                 <option value = "91">Java (JDK 17.0.6)</option>

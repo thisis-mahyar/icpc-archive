@@ -6,6 +6,8 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class JudgeService {
     private static final String API_URL = "https://ce.judge0.com/submissions?wait=true";
@@ -16,7 +18,7 @@ public class JudgeService {
     private final HttpClient client = HttpClient.newHttpClient();
     private final ObjectMapper mapper = new ObjectMapper();
 
-    public SubmissionResponse submitCode(SubmissionRequest submissionRequest) throws Exception {
+    public SubmissionResponseDTO submitCode(SubmissionRequest submissionRequest) throws Exception {
         // convert java object into json
         String jsonBody = mapper.writeValueAsString(submissionRequest);
 
@@ -30,6 +32,10 @@ public class JudgeService {
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        return mapper.readValue(response.body(), SubmissionResponse.class);
+        System.out.println(response.body());
+
+        SubmissionResponse submissionResponse = mapper.readValue(response.body(), SubmissionResponse.class);
+
+        return new SubmissionResponseDTO(submissionResponse);
     }
 }

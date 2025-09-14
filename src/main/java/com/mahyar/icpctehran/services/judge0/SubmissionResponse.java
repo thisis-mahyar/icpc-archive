@@ -1,29 +1,37 @@
 package com.mahyar.icpctehran.services.judge0;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class SubmissionResponse {
     @JsonProperty("stdout")
-    private String stdout;
+    private String stdOut;
 
+    @JsonProperty("time")
     private String time;
 
+    @JsonProperty("memory")
     private int memory;
 
     @JsonProperty("stderr")
     private String stdErr;
 
+    @JsonProperty("token")
     private String token;
 
     @JsonProperty("compile_output")
     private String compileOutput;
 
+    @JsonProperty("message")
     private String message;
 
     private Status status;
 
+    public SubmissionResponse() {}
+
     public SubmissionResponse(String stdout, String time, int memory, String stdErr, String token, String compileOutput, String message, Status status) {
-        this.stdout = stdout;
+        this.stdOut = stdout;
         this.time = time;
         this.memory = memory;
         this.stdErr = stdErr;
@@ -34,11 +42,11 @@ public class SubmissionResponse {
     }
 
     public String getStdout() {
-        return stdout;
+        return stdOut;
     }
 
     public void setStdout(String stdout) {
-        this.stdout = stdout;
+        this.stdOut = stdout;
     }
 
     public String getTime() {
@@ -100,7 +108,7 @@ public class SubmissionResponse {
     @Override
     public String toString() {
         return "SubmissionResponse{" +
-                "stdout='" + stdout + '\'' +
+                "stdout='" + stdOut + '\'' +
                 ", time='" + time + '\'' +
                 ", memory=" + memory +
                 ", stdErr='" + stdErr + '\'' +

@@ -17,11 +17,13 @@ public class SubmissionRequest {
     @JsonProperty("expected_output")
     private String expectedOutput;
 
+    public SubmissionRequest() {}
+
     public SubmissionRequest(String sourceCode, int languageId, String stdIn) {
         this.sourceCode = sourceCode;
         this.languageId = languageId;
         this.stdIn = stdIn;
-        this.expectedOutput = "";
+        this.expectedOutput = null;
     }
 
     public SubmissionRequest(String sourceCode, int languageId, String stdIn, String expectedOutput) {
